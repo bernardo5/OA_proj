@@ -1,21 +1,23 @@
 % uses package CVX from http://cvxr.com/cvx
 
+n=4;
+
 %variable controling tradeoff betwen return and risk
 gama=0.4;
 
 %generate vector of ones
-vec_ones=ones(4,1);
+vec_ones=ones(n,1);
 
 % generate random expected returns of the assets
-miu=rand(4,1);
+miu=rand(n,1);
 
 %covariance matrix of the returns of assets in portfolio
-temp=rand(4);
+temp=rand(n);
 cov=temp'*temp;
 
 % solve optimization problem
 cvx_begin
-variable w(4);
+variable w(n);
 
 maximize(miu'*w - gama*w'*cov*w);
 
