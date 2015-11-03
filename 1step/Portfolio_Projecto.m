@@ -16,7 +16,7 @@ cov=temp'*temp;
 gama=0:0.1:1; %equivalent as gama=[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9]
 
 color=['y' 'm' 'c' 'r' 'g' 'b' 'w' 'k' 'y' 'm']
-
+%amarelo, magenta, ciao, vermelho, verde, azul, branco, preto
 i=1;
 while i<=10
     % solve optimization problem
@@ -37,7 +37,7 @@ while i<=10
     subplot(1,3,2); stem(w,color(i),'LineWidth',5);
     title('portfolio');
     hold on;
-    subplot(1,3,3); stem(gama(i)*w'*cov*w,color(i),'LineWidth',5);
+    subplot(1,3,3); stem(cov*w,color(i),'LineWidth',5);
     title('risk');
     
     i=i+1;
