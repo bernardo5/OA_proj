@@ -26,7 +26,7 @@ while i<=10
     (vec_ones')*w == 1; w>=0;
     cvx_end;
 
-    figure(1); %clf; % plot solution
+    figure(i); %clf; % plot solution
     hold on;
     subplot(1,3,1); stem(miu,'LineWidth',5);
     title('rates of return');
