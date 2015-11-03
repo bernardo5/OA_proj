@@ -30,8 +30,10 @@ while i<=10
     hold on;
     subplot(1,3,1); stem(miu,'LineWidth',5);
     title('rates of return');
+    hold on;
     subplot(1,3,2); stem(w,'r','LineWidth',5);
     title('portfolio');
+    hold on;
     subplot(1,3,3); stem(gama(i)*w'*cov*w,'r','LineWidth',5);
     title('risk');
     
