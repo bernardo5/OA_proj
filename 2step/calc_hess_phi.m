@@ -1,4 +1,4 @@
-function [ hess ] = hessiana_phi( z, entries )
+function [ hess ] = calc_hess_phi( z, entries )
 
 z1=1./z;
 
