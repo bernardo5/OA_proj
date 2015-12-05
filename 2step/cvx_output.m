@@ -31,7 +31,7 @@ i=1;
 %     subplot(1,3,3); stem(cov*w,'r','LineWidth',5);
 %     title('risk');
     
-    i=i+1;
+   % i=i+1;
 %end
 
 
