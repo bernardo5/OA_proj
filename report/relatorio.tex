@@ -25,6 +25,7 @@ Financial portfolio optimization}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{listings}
 
 \begin{document}
 \maketitle
@@ -43,54 +44,62 @@ Posteriormente, o problema foi reformulado por forma a obter uma solução sub-�
 %----------------------------------------------------------------------------------------------------------------
 \end{abstract}
 
-\section{Introduction}
+\smallskip
+\noindent \textbf{Keywords.} Portfolio Optimization \textbullet CVX \textbullet Barrier Method \textbullet Newton Method
+
+\section{Introdução}
 \label{sec:introduction}
-Explain clearly the problem that you address. Use words only, i.e., 
-avoid math (this will be given later).
+Este artigo pretende obter uma solução para o problema de \textit{Portfolio Optimization}. Para tal, a nossa abordagem maximiza o retorno esperado e minimiza o risco de investimento tendo em conta a aversão ao risco colocada pela pessoa que investe.
 
-Motivate the problem. At a high level, what is the problem
-area you are working in and why is it important? Then, zoom in to the
-specific problem considered in this paper.
+Na vida real, o problema discutido neste artigo tem extrema importância na medida em que praticamente todas as pessoas fazem investimentos do seu dinheiro. A formulação terá em conta não só os casos em que a pessoa pretende rápidos retornos e pretende que estes sejam bastante elevados, independentemente de o risco a ele associado ser relativamente elevado, como também casos cujo objetivo seja obter um resultado de longo prazo em que a aversão ao risco é um fator preponderante face à quantia recebida.
 
-Finally, summarize what are the main contributions of your paper given
-the context you have established in the previous paragraphs. What is
-the general approach taken? Why are the specific results significant?
+%contributions!!!!!!!!!!!!
+Por forma a resolver, e melhor compreender o problema, numa primeira abordagem foi utilizado o \textit{software CVX}. Posteriormente, implementa-se a mesma resolução do problema, mas com este reescrito por forma a utilizar o algoritmo \textit{Barrier Method}. 
 
 
-For the paper outline you can write something like: ``The remainder of
-the paper is organized as follows. In
-Section~\ref{sec:problem-formulation}, we
-introduce... Section~\ref{sec:approach} describes ... Numerical
-results of... are presented in
-Section~\ref{sec:numerical-results}. Finally, we state our conclusions
-in Section~\ref{sec:conclusion}.'' Note that Section is capitalized.
+O artigo está organizado da forma enunciada de seguida. No capítulo
+~\ref{sec:problem-formulation}, é introduzida a função a otimizar e as respetivas variáveis,  capítulo~\ref{sec:cvx} descreve a abordagem para a utilização do \textit{software CVX}, sendo esta alterada para a utilização do \textit{Barrier Method}, descrito no capítulo~\ref{sec:barrier-method}. Os resultados obtidos nas duas fases são discutidos e comparados em~\ref{sec:numerical-results}. As conclusões são apresentadas posteriormente em ~\ref{sec:conclusion}.
 
-\section{Problem formulation}
+\section{Formulação do Problema}
 \label{sec:problem-formulation}
 
-You now introduce the optimization problem to be solved. Explain the
-variables used. Mention which ones are optimization variables. Write
-the problem formulation \textit{e.g.}, as
+Para a obtenção dos resultados do problema descrito anteriormente, a função utilizada foi a seguinte:
 \begin{equation}
   \label{eq:problem}
-\begin{array}[t]{ll} \text{minimize} & x^\top A x + b^\top x \\
-\text{subject to} & C x \leq d \\ & \left\| x - p \right\| \leq 1 \end{array}
+\begin{array}[t]{ll} \text{maximize} & \mu^\top \omega - \gamma \omega^\top \Sigma \omega \\
+\text{subject to} & 1^\top \omega = 1 \\ &  \omega \in \mathbb{R}_+^n \end{array}
 \end{equation}
-noticing that the equations are part of the text flow, so they are also
-punctuated, when needed.
 
-\section{Approach}
-\label{sec:approach}
+Apresenta-se de seguida a descrição das variáveis da função de otimização:
 
-Here you describe what you have done to solve the problem stated in
-equation~\eqref{eq:problem}. Whenever you use a result or an algorithm
-from a book or a paper, or when you want to refer to some other work,
-don't forget to cite it. In \cite{Oetiker11}, you can find further
-information about bibliography.
+\begin{itemize}
+\item  $\omega$ $\rightarrow$ vetor de dimensão \textit{n}, onde cada posição \textit{i}, contém a fração do dinheiro a investir no \textit{asset i} para obter o máximo de lucro. Será esta a variável que se pretende a maximizar;
 
-In this document I have included one reference: the number in brackets
-in the previous paragraph. At the end of the document you can see the
-full reference.
+\item $\mu$ $\rightarrow$ vetor de dimensão \textit{n}, onde cada posição \textit{i}, contém o retorno esperado para o \textit{asset i};
+
+\item $\Sigma$ $\rightarrow$ matriz das covariâncias, de dimensão \textit{n}$\times$\textit{n} dos retornos dos \textit{assets}. É através deste parâmetro que se representa a influência que cada \textit{asset} tem nos restantes e vice-versa. Por exemplo, é de esperar que tendo um valor muito elevado na entrada \textit{ij} desta matriz, no caso de haver uma quebra nos retornos do \textit{asset i}, o \textit{asset j} irá, também sofrer quebra nos retornos, ou um aumento dos mesmos, dependendo do valor dessa entrada. Um caso real desta formulação é a forte dependência entre as ações do petróleo e dos automóveis ou a relação de competição entre cadeias concorrentes;
+
+\item $\mu^\top \omega \rightarrow$ representa o retorno expectável do portfólio;
+
+\item $\gamma \rightarrow$ variável que controla o \textit{tradeoff} entre o retorno e o risco. Será este parâmetro que irá controlar se se pretende investir dando preferência a maximizar o retorno, ou dando preferência à minimização do risco;
+
+\item $\gamma \omega^\top \Sigma \omega \rightarrow$ representa a variância do retorno do portfólio. É o parâmetro que mede o risco de investimento;
+\end{itemize}
+
+A \textit{constraint} $1^\top \omega = 1$ indica que a soma dos investimentos no portfólio não pode ultrapassar o capital inicial. Note-se que os investimentos são uma fração do capital inicial e não o seu valor absoluto. Ao forçar que $\omega \in \mathbb{R}_+^n$ indica que não podem existir investimentos negativos. 
+%Falar com o professor
+Na prática esta situação poderia existir, no caso de termos capital num dado \textit{asset} e a melhor solução ser retirar o capital deste para investir noutro mais lucrativo.
+
+\section{CVX}
+\label{sec:cvx}
+Por forma a implementar a solução apresentada na equação 1, utilizou-se o \textit{software CVX}\cite{CVX}. De seguida apresenta-se a parte do código de \textit{Matlab} onde se utiliza o \textit{CVX}.
+
+\lstinputlisting{cvx.m}
+
+
+\section{Barrier Method}
+\label{sec:barrier-method}
+
 
 \section{Numerical results}
 \label{sec:numerical-results}
@@ -140,11 +149,8 @@ cases it's possible to now make the original claims more concrete,
 
 \begin{thebibliography}{9}
 
-\bibitem{Oetiker11}
-  Tobias Oetiker,
-  \emph{The (not so) short introduction to \LaTeX}.
-  available at \texttt{http://tobi.oetiker.ch/lshort/lshort.pdf}
-  2011
+\bibitem{CVX}
+  [CVX15] \texttt{http://cvxr.com/cvx}, Junho 2015
 
 \end{thebibliography}
 
