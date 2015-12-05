@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  5 DEC 2015 11:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  5 DEC 2015 15:29
 entering extended mode
 **relatorio.tex
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\relatorio.tex
@@ -120,26 +120,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) ("C:\Program Files\MiKTeX 2.9_\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
-
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files\MiKTeX 2.9_\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files\MiKTeX 2.9_\tex\generic\babel\portuges.ldf"
-Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
-
-("C:\Program Files\MiKTeX 2.9_\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count94
-\U@D=\dimen126
-)
-Package babel Info: Making " an active character on input line 145.
-))
-("C:\Program Files\MiKTeX 2.9_\tex\latex\base\inputenc.sty"
+) ("C:\Program Files\MiKTeX 2.9_\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
@@ -383,10 +364,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 ("C:\Program Files\MiKTeX 2.9_\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count95
+\Gread@gobject=\count94
 ))
-\Gin@req@height=\dimen127
-\Gin@req@width=\dimen128
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
 )
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
@@ -399,46 +380,46 @@ Package: amstext 2000/06/29 v2.01
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
-\ex@=\dimen129
+\ex@=\dimen128
 ))
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen130
+\pmbraise@=\dimen129
 )
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count96
+\inf@bad=\count95
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count97
-\leftroot@=\count98
+\uproot@=\count96
+\leftroot@=\count97
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count99
-\DOTSCASE@=\count100
+\classnum@=\count98
+\DOTSCASE@=\count99
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
-\big@size=\dimen131
+\big@size=\dimen130
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count101
-\c@MaxMatrixCols=\count102
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
 \dotsspace@=\muskip10
-\c@parentequation=\count103
-\dspbrk@lvl=\count104
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
 \tag@help=\toks19
-\row@=\count105
-\column@=\count106
-\maxfields@=\count107
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
 \andhelp@=\toks20
-\eqnshift@=\dimen132
-\alignsep@=\dimen133
-\tagshift@=\dimen134
-\tagwidth@=\dimen135
-\totwidth@=\dimen136
-\lineht@=\dimen137
+\eqnshift@=\dimen131
+\alignsep@=\dimen132
+\tagshift@=\dimen133
+\tagwidth@=\dimen134
+\totwidth@=\dimen135
+\lineht@=\dimen136
 \@envbody=\toks21
 \multlinegap=\skip45
 \multlinetaggap=\skip46
@@ -454,46 +435,46 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\relatorio.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 -- Lines per column: 58 (exact).
 ("C:\Program Files\MiKTeX 2.9_\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
-\scratchdimen=\dimen138
+\scratchcounter=\count107
+\scratchdimen=\dimen137
 \scratchbox=\box30
-\nofMPsegments=\count109
-\nofMParguments=\count110
+\nofMPsegments=\count108
+\nofMParguments=\count109
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count111
-\MPscratchDim=\dimen139
-\MPnumerator=\count112
-\makeMPintoPDFobject=\count113
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen138
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks24
 )
 ** WARNING: \and is valid only when in conference or peerreviewca
-modes (line 31).
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
+modes (line 30).
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 30.
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 73.
+LaTeX Font Info:    Try loading font information for U+msa on input line 74.
 
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 73.
+LaTeX Font Info:    Try loading font information for U+msb on input line 74.
 
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -501,7 +482,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <./solution1.png, id=1, 449.68pt x 337.26pt>
 File: ./solution1.png Graphic file (type png)
  <use ./solution1.png>
-Package pdftex.def Info: ./solution1.png used on input line 115.
+Package pdftex.def Info: ./solution1.png used on input line 116.
 (pdftex.def)             Requested size: 226.79846pt x 170.10138pt.
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
@@ -512,13 +493,13 @@ Package pdftex.def Info: ./solution1.png used on input line 115.
 ]
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\relatorio.aux) ) 
 Here is how much of TeX's memory you used:
- 3235 strings out of 493921
- 46468 string characters out of 3146873
- 109883 words of memory out of 3000000
- 6490 multiletter control sequences out of 15000+200000
+ 2897 strings out of 493921
+ 42295 string characters out of 3146873
+ 103590 words of memory out of 3000000
+ 6165 multiletter control sequences out of 15000+200000
  42734 words of font info for 90 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,8n,24p,241b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,24p,360b,250s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program F
 iles/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9_/
 fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
@@ -529,7 +510,7 @@ fonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a
  Files/MiKTeX 2.9_/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2
 .9_/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on relatorio.pdf (2 pages, 102307 bytes).
+Output written on relatorio.pdf (2 pages, 104999 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
