@@ -1,4 +1,4 @@
-tic
+
 
 %variable controling tradeoff betwen return and risk
 gama=0.4;
@@ -29,8 +29,10 @@ miu=randn(entries,1);
 temp=rand(entries);
 cov=temp'*temp;
 
-%temp=[0.296675873218327 0.0855157970900440 0.928854139478045 0.237283579771521;0.318778301925882 0.262482234698333 0.730330862855453 0.458848828179931;0.424166759713807 0.801014622769739 0.488608973803579 0.963088539286913;0.507858284661118 0.0292202775621463 0.578525061023439 0.546805718738968];
-%cov=temp'*temp;
+%CVX solver
+tic
+cvx_w=cvx_output(entries, miu, cov, gama );
+toc
 
 %initial t, u and tolerance
 t=1;
@@ -40,7 +42,7 @@ epsb=0.05;
 
 %BARRIER METHOD
 %LOOP BARRIER
-
+tic
 while(1)
     
     %METODO DE NEWTON
