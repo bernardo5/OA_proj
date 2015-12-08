@@ -33,16 +33,16 @@ gama=0.4;
     (vec_ones')*w == 1; w>=0;
     cvx_end;
 
-%     figure; %clf; % plot solution
-%     hold on;
-%     subplot(1,3,1); stem(miu,'LineWidth',5);
-%     title('rates of return');
-%     hold on;
-%     subplot(1,3,2); stem(w,'r','LineWidth',5);
-%     title('portfolio');
-%     hold on;
-%     subplot(1,3,3); stem(cov*w,'r','LineWidth',5);
-%     title('risk');
+    figure; %clf; % plot solution
+    hold on;
+    subplot(1,3,1); stem(miu,'LineWidth',5);
+    title('rates of return');
+    hold on;
+    subplot(1,3,2); stem(w,'r','LineWidth',5);
+    title('portfolio');
+    hold on;
+    subplot(1,3,3); stem(cov*w,'r','LineWidth',5);
+    title('risk');
     
     i=i+1;
 %end

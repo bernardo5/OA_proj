@@ -20,14 +20,16 @@ b=zeros(entries,1);
 b(entries)=1;
 
 % generate random expected returns of the assets
-miu=rand(entries,1);
+%miu=rand(entries,1);
+miu = [5 3 1 1];
+miu = miu';
 
 %covariance matrix of the returns of assets in portfolio
 temp=rand(entries);
+%temp=[1 40 1 1];
 cov=temp'*temp;
 
-%cov(1,2)=4;
-%cov(2,1)=4;
+cov[1,2]=cov{2}{1}=1000;
 
 % %CVX solver
 % tic
@@ -110,7 +112,7 @@ while(1)
     
 end
 
-z(entries)=1-sum(z);
+z(n)=1-sum(z);
 
     %figure; %clf; % plot solution
     %hold on;
