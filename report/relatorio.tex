@@ -9,7 +9,7 @@
 %%This template is compatible with both methods.
 %%
 \title{{\normalsize Optimization and Algorithms} \\
-Financial portfolio optimization}
+Financial Portfolio Optimization}
 \author{
         Bernardo Gomes
         \and
@@ -26,6 +26,7 @@ Financial portfolio optimization}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{listings}
+\usepackage{algorithmic}
 
 \begin{document}
 \maketitle
@@ -104,11 +105,22 @@ Por forma a implementar a solução apresentada na equação 1, e sendo esta con
 \section{Barrier Method}
 \label{sec:barrier-method}
 
-Por forma a melhorar o tempo de otimização, utiliza-se o \textit{Barrier Method}. Pela impossibilidade de aplicação deste método com a formulação anterior devido à \textit{constraint} \: $1^\top\omega=1$, foi necessário recorrer a uma mudança de variável.
-
-Deste modo, define-se $\omega$ pela equação (2). 
+Por forma a melhorar o tempo de otimização, utiliza-se um \textit{Interior Point Method}. Para esta abordagem, pretende-se reescrever o problema sob a forma de problema de otimização da seguinte forma:
 
 \begin{equation}
+\label{eq.ineq}
+\begin{array}[t]{ll} \text{minimize} & f_0(x) \\
+\text{subject to} & f_i(x) \leq 0 \\ &  Ax=b \end{array}
+\end{equation}
+
+As \textit{constraints} de otimização devem portanto ser lineares ou inequações do tipo acima descrito em que os $f_i$ são convexos e duas vezes diferenciáveis.
+
+Pela impossibilidade de aplicação deste método com a formulação anterior devido à \textit{constraint} \: $1^\top\omega=1$, foi necessário recorrer a uma mudança de variável.
+
+Deste modo, define-se $\omega$ pela equação (\ref{eq.w}). 
+
+\begin{equation}
+\label{eq.w}
 \omega = D z + b
 \end{equation}
 
@@ -145,9 +157,118 @@ $
 \vskip 4mm
 Com esta mudança de variável, a nova variável de otimização \textit{z}, tem menos um grau de liberdade que a anterior, $\omega$. O último investimento será assim a percentagem em falta do capital inicial. 
 
-Esta condição é conseguida através da equação matricial (2), onde a matriz \textit{D} é uma matriz identidade nas primeiras \textit{n-1} linhas e a última ser uma linha de "-1"'s; a matriz \textit{b} é uma matriz coluna de "0"'s com  apenas a ultima posição "1", sendo a \textit{constraint} referida anteriormente assim respeitada.
+Esta condição é conseguida através da equação matricial (\ref{eq.w}), onde a matriz \textit{D} é uma matriz identidade nas primeiras \textit{n-1} linhas e a última ser uma linha de "-1"'s; a matriz \textit{b} é uma matriz coluna de "0"'s com  apenas a ultima posição "1", sendo a \textit{constraint} referida anteriormente assim respeitada.
 
-\section{Numerical results}
+%rever portugues----------------------------------------------------------------------------------------------
+Relativamente à segunda \textit{constraint}, $\omega \in \mathbb{R}_+^n$, com a mudança de variável efetuada, tem-se $D z + b \geq 0$. Como tal, o problema descrito pela equação (\ref{eq.ineq}) adaptado à situação em causa ficará escrito da seguinte forma:
+%-------------------------------------------------------------------------------------------------------
+\begin{equation}
+\label{subs}
+\begin{array}[t]{ll} \text{minimize} & -\mu^\top (D z + b) + \gamma (D z + b)^\top \Sigma (D z + b) \\
+\text{subject to} & -D z - b \leq 0 \end{array}
+\end{equation}
+
+Os $f_i(x)$ são assim $f_i(x) = -\delta_i^\top z - b_i$ onde $\delta_i^\top$ representa a linha \textit{i} da matriz \textit{D}.
+
+Pretende-se utilizar o \textit{Barrier Method}, que otimiza formulações semelhantes às da equação (\ref{eq.barrier}), onde $I\_f_i(x)$ representa uma barreira, ou seja, para $f_i(x) \leq 0$, tem valor nulo sendo infinito para os restantes.
+
+\begin{equation}
+\label{eq.barrier}
+\begin{array}[t]{ll} \text{minimize} & f_0(x) + \sum_{i=1}^{m} I\_(f_i(x)) \\
+\text{subject to} &  Ax=b \end{array}
+\end{equation}
+
+Não sendo possível a implementação de funções não diferenciáveis, faz-se uma aproximação logarítmica da barreira, reformulando a equação (\ref{eq.barrier}) em (\ref{eq.log-bar}).
+
+\begin{equation}
+\label{eq.log-bar}
+\begin{array}[t]{ll} \text{minimize} & f_0(x) + (1/t) \sum_{i=1}^{m} log(f_i(x)) \\
+\text{subject to} &  Ax=b \end{array}
+\end{equation}
+
+Para valores positivos de \textit{t}, $(1/t) log(f_i(x))$ será uma aproximação suave da barreira. Com o aumento do parâmetro \textit{t}, a aproximação utilizada será cada vez mais próxima da barreira ideal. A figura \ref{fig:barrier} ilustra a aproximação à barreira pretendida com a variação de \textit{t}.
+
+%PERGUNTAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! CENTRAR
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=0.9\columnwidth]{log-barrier.png}
+  \caption{Aproximação da barreira ideal para vários valores de \textit{t}}
+  \label{fig:barrier}
+\end{figure}
+
+Com o problema reescrito, o algoritmo \textit{Barrier Method}\cite{BARRIER} implementado é o seguinte:
+
+\begin{algorithmic}[1]
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\REQUIRE $x \textit{ strictly feasible}, t > 0, \mu > 1, \epsilon > 0$
+
+\STATE obtenção de $x^* (t)$ pela minimização de $t f_0 + \phi$
+\STATE Atualização de $x:=x^* (t)$
+\STATE \textbf{If}($m/t < \epsilon$) \textbf{then} Stop
+\STATE Incremento de $t$. $t:=\mu t$.
+\end{algorithmic}
+
+%VERIFICAR se M ou n E PEDIR AO PROF PARA EXPLICAR CRITERIO DE PARAGEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Neste algoritmo, faz-se no primeiro passo a minimização com recurso ao método de \textit{Newton}, sendo a função utilizada a apresentada na equação (\ref{eq.Newton}),
+
+\begin{equation}
+\label{eq.Newton}
+f(z) = t f_0 (z) + \phi (z)
+\end{equation}
+
+onde
+
+\begin{equation}
+f_0 (z) = -\mu^\top (D z + b) + \gamma (D z + b)^\top \Sigma (D z + b)
+\end{equation}
+
+e
+
+\begin{equation}
+\phi = -\sum_{i=1}^{m} log(-f_i(x))
+\end{equation}
+
+Para a aplicação do método de \textit{Newton}, é ainda necessário o cálculo do gradiente e da hessiana da função $f (z)$. Como tal, o gradiente é obtido da seguinte forma:
+
+\begin{equation}
+\nabla f(z) = t (\nabla f_0(z))^\top + \nabla \phi (z)
+\end{equation}
+
+onde
+
+\begin{equation}
+\nabla f_0 (z) = -\mu^\top D + \gamma (D z + b)^\top 2 \Sigma D  
+\end{equation}
+
+e
+
+\begin{equation}
+\nabla \phi (z) = \sum_{i=1}^{m} \frac{1}{-f_i (z)} \nabla f_i (z) 
+\end{equation}
+
+A expressão da hessiana será obtida de forma idêntica pelas equações (\ref{eq.hess}), (\ref{eq.hesss}) e (\ref{eq.hessss}).
+
+\begin{equation}
+\label{eq.hess}
+\nabla^2 f(z) = t (\nabla^2 f_0(z))^\top + \nabla^2 \phi (z)
+\end{equation}
+
+\begin{equation}
+\label{eq.hesss}
+\nabla^2 f_0 (z) = \gamma 2 (D^\top \Sigma D) 
+\end{equation}
+
+\begin{equation}
+\label{eq.hessss}
+\nabla^2 \phi (z) = \sum_{i=1}^{m} \frac{1}{-f_i^2 (z)} \nabla f_i (z) (\nabla f_i (z))^\top
+\end{equation}
+
+O \textit{Barrier Method} permite efetuar várias otimizações da função $f(z)$, dependendo do valor de \textit{t} na iteração atual. 
+À medida que \textit{t} tende para um valor elevado, estamos a otimizar a função que mais se aproxima à pretendida, recorrendo à \textit{indicator function}.
+O termo $\phi$ da função evita que a minimização com o método de Newton vá para soluções não permitidas, uma vez que a função em causa vai para um valor infinito (\textit{penalty}) e assim o método de newton procura encontrar outro \textit{step} para encontrar uma solução viável. Por último o \textit{Barrier Method} converge num número finito de passos indicado pelo ponto três do algoritmo.
+
+\section{Resultados Numéricos}
 \label{sec:numerical-results}
 
 How does it really work in practice? Provide simulated performance
@@ -184,7 +305,7 @@ significant over what range and which ones are less important.
 
 
 
-\section{Conclusions}
+\section{Conclusões}
 \label{sec:conclusion}
 
 In general a short summarizing paragraph will be sufficient. It should
@@ -197,6 +318,10 @@ cases it's possible to now make the original claims more concrete,
 
 \bibitem{CVX}
   [CVX15] \texttt{http://cvxr.com/cvx}, Junho 2015
+  
+\bibitem{BARRIER}
+  [BV\_CVXSLIDES] \texttt{https://web.stanford.edu/boyd/cvxbook/ bv\_cvxslides.pdf}
+
 
 \end{thebibliography}
 
