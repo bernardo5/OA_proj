@@ -208,7 +208,7 @@ Com o problema reescrito, o algoritmo \textit{Barrier Method}\cite{BARRIER} impl
 \STATE Incremento de $t$. $t:=\mu t$.
 \end{algorithmic}
 
-%VERIFICAR M!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%VERIFICAR se M ou n E PEDIR AO PROF PARA EXPLICAR CRITERIO DE PARAGEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Neste algoritmo, faz-se no primeiro passo a minimização com recurso ao método de \textit{Newton}, sendo a função utilizada a apresentada na equação (\ref{eq.Newton}),
 
@@ -264,7 +264,9 @@ A expressão da hessiana será obtida de forma idêntica pelas equações (\ref{
 \nabla^2 \phi (z) = \sum_{i=1}^{m} \frac{1}{-f_i^2 (z)} \nabla f_i (z) (\nabla f_i (z))^\top
 \end{equation}
 
-
+O \textit{Barrier Method} permite efetuar várias otimizações da função $f(z)$, dependendo do valor de \textit{t} na iteração atual. 
+À medida que \textit{t} tende para um valor elevado, estamos a otimizar a função que mais se aproxima à pretendida, recorrendo à \textit{indicator function}.
+O termo $\phi$ da função evita que a minimização com o método de Newton vá para soluções não permitidas, uma vez que a função em causa vai para um valor infinito (\textit{penalty}) e assim o método de newton procura encontrar outro \textit{step} para encontrar uma solução viável. Por último o \textit{Barrier Method} converge num número finito de passos indicado pelo ponto três do algoritmo.
 
 \section{Resultados Numéricos}
 \label{sec:numerical-results}
@@ -318,7 +320,7 @@ cases it's possible to now make the original claims more concrete,
   [CVX15] \texttt{http://cvxr.com/cvx}, Junho 2015
   
 \bibitem{BARRIER}
-  [BV\_CVXSLIDES] \texttt{https://web.stanford.edu/~boyd/cvxbook/bv\_cvxslides.pdf}
+  [BV\_CVXSLIDES] \texttt{https://web.stanford.edu/boyd/cvxbook/ bv\_cvxslides.pdf}
 
 
 \end{thebibliography}

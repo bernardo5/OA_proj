@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  8 DEC 2015 18:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  8 DEC 2015 18:51
 entering extended mode
 **relatorio.tex
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\relatorio.tex
@@ -561,21 +561,21 @@ Package pdftex.def Info: log-barrier.png used on input line 194.
 <./solution1.png, id=22, 449.68pt x 337.26pt>
 File: ./solution1.png Graphic file (type png)
  <use ./solution1.png>
-Package pdftex.def Info: ./solution1.png used on input line 290.
+Package pdftex.def Info: ./solution1.png used on input line 292.
 (pdftex.def)             Requested size: 226.79846pt x 170.10138pt.
 
-Overfull \hbox (92.60667pt too wide) in paragraph at lines 321--322
-[]\OT1/ptm/m/n/8 [BV[]CVXSLIDES] \OT1/pcr/m/n/8 https://web.stanford.edu/ boyd/
-cvxbook/bv_cvxslides.pdf 
+Overfull \hbox (11.00662pt too wide) in paragraph at lines 323--324
+[]\OT1/ptm/m/n/8 [BV[]CVXSLIDES] \OT1/pcr/m/n/8 https://web.stanford.edu/boyd/c
+vxbook/
  []
 
 [3 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report/solution1.png (PNG copy)>]
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\relatorio.aux) ) 
 Here is how much of TeX's memory you used:
- 4716 strings out of 493921
- 66051 string characters out of 3146873
+ 4717 strings out of 493921
+ 66059 string characters out of 3146873
  140994 words of memory out of 3000000
- 7961 multiletter control sequences out of 15000+200000
+ 7962 multiletter control sequences out of 15000+200000
  39057 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,10n,32p,723b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -592,7 +592,7 @@ gram Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiK
 TeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
 ype1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/
 utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utmri8a.pfb>
-Output written on relatorio.pdf (3 pages, 163574 bytes).
+Output written on relatorio.pdf (3 pages, 164655 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
