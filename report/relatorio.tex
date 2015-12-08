@@ -27,6 +27,7 @@ Financial Portfolio Optimization}
 \usepackage{amsfonts}
 \usepackage{listings}
 \usepackage{algorithmic}
+\usepackage{subfig}
 
 \begin{document}
 \maketitle
@@ -274,11 +275,70 @@ O termo $\phi$ da função evita que a minimização com o método de Newton vá
 How does it really work in practice? Provide simulated performance
 metrics. If possible, compare with other well-known methods.
 
-Explain your experiments' setup to make it easily understandable and
-replicable by a reader from the field that does not know your problem.
+Nas figuras que irão ser expostas tem-se a verde os resultados do \textit{Barrier Method} e a vermelho do \textit{CVX}, tanto os retornos como os riscos dos \textit{assets} são iguais para ambos os programas.
+Para verificar o correto funcionamento de ambos os programas realizaram-se testes em que os resultados podem ser facilmente previstos, tais como:
 
-Comment your results. It might help to show a plot, as to illustrate
-your commentary, like Figure~\ref{fig:solution-l1}.
+\begin{itemize}
+\item Igualar $\gamma$ a zero, ou seja, caso o utilizador não tenha quaisquer preocupações com o risco associado a cada investimento. Espera-se, portanto, que o portfólio obtido seja investir todo o capital no \textit{asset} com maior retorno, independentemente do risco.
+\begin{figure}[htp]
+\captionsetup{font=scriptsize}  
+  \centering
+  \includegraphics[width=0.9\columnwidth]{./gama_0}
+  \caption{Portfólio com $\gamma$ igual a 0}
+  \label{fig:caso1}
+\end{figure}
+
+Na figura \ref{fig:caso1} observa-se que, de facto, o capital foi investido no \textit{asset} de maior retorno. Existem pequenas diferenças entre o portfólio apresentado pelos dois programas, pelo que se pode observar que no resultado do \textit{CVX} o investimento é total no \textit{asset} de maior retorno, enquanto que no resultado do \textit{Barrier Method} existem pequenas quantias investidas pelos outros \textit{assets}.
+\vskip 4mm
+
+\item Igualar $\gamma$ a 100 (100 é um valor arbitrário), pretende-se ilustrar uma aversão ao risco muito elevada por parte do utilizador. Espera-se um portfólio bastante conservador, ou seja, que seja investido capital apenas no(s) \textit{asset(s)} com menor risco associado. Quando $\gamma$ tende para infinito, o portfólio será investido somente nos \textit{assets} com menor risco associado, ao contrário do caso em que $\gamma$ é igual a 100, onde existem pequenos investimentos nos outros \textit{assets}.
+
+\begin{figure}[htp]
+\captionsetup{font=scriptsize}  
+  \centering
+  \includegraphics[width=0.9\columnwidth]{./gama_100}
+  \caption{Portfólio com $\gamma$ igual a 100 e alguns retornos negativos}
+  \label{fig:caso2.1}
+\end{figure}
+
+Na figura \ref{fig:caso2.1} a solução dada por ambos os programas é em tudo semelhante, note-se que, apesar das \textit{rates of return} dos \textit{assets} de menor risco serem negativas, a aversão ao risco do utilizador irá gerar um portfólio em que a importância dada ao risco é bastante superior à dos retornos. A divisão do portfólio pelos dois \textit{assets} de menor risco é a esperada, ambos os programas \: escolheram investir mais capital no \textit{asset} com maior retorno.
+
+
+\begin{figure}[htp]
+\captionsetup{font=scriptsize}  
+  \centering
+  \includegraphics[width=0.9\columnwidth]{./gama_100_positivos}
+  \caption{Portfólio com $\gamma$ igual a 100 e retornos positivos}
+  \label{fig:caso2.2}
+\end{figure}
+
+No caso da figura \ref{fig:caso2.2}, o portfólio segue o mesmo padrão da figura \ref{fig:caso2.1}, aposta-se o capital nos \textit{assets} de menor risco e entre eles, investe-se a grande parte no \textit{asset} que apresenta maior retorno.
+\vskip 4mm
+\item Igualar todos o \textit{returns} e riscos de todos os \textit{assets}. O portfólio deverá dividir o capital igualmente por todos os \textit{assets}.
+
+\begin{figure}[htp]
+\captionsetup{font=scriptsize}  
+  \centering
+  \includegraphics[width=0.9\columnwidth]{./miu_igual}
+  \caption{Portfólio com riscos e retornos iguais para todos os \textit{assets}}
+  \label{fig:caso3}
+\end{figure}
+\vskip 4mm
+Na figura \ref{fig:caso3} os resultados do portfólio refletem o esperado, visto que ambos os programas repartiram igualmente o capital por todos os \textit{assets}.
+\vskip 4mm
+\item Igualar apenas os \textit{returns} de todos os \textit{assets}. O portfólio deverá investir a grande parte do seu capital no \textit{asset} de menor risco. Quando se aumenta $\gamma$ nesta situação é esperado que a quantidade investida no \textit{asset} de menor risco aumente.
+
+\begin{figure}[htp]
+\captionsetup{font=scriptsize}  
+  \centering
+  \includegraphics[width=0.9\columnwidth]{./miu_igual_risco_diferente}
+  \caption{Portfólio com retornos iguais para todos os \textit{assets}}
+  \label{fig:caso4}
+\end{figure}
+
+No caso enunciado acima, a solução de portfólio ótima é intuitiva, os programas deverão investir todo o capital no \textit{asset} de menor risco, visto que todos retornam o mesmo valor do investimento inicial. É isto que se comprova na figura \ref{fig:caso4}.
+
+\end{itemize} 
 
 
 The commentary of the plots should not just repeat the graphically
