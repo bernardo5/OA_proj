@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  5 DEC 2015 18:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  8 DEC 2015 10:30
 entering extended mode
 **relatorio.tex
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\relatorio.tex
@@ -515,12 +515,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \vbox (badness 5908) has occurred while \output is active []
 
-
-(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\cvx.m [1{C:/ProgramData/MiKTe
-X/2.9/pdftex/config/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
+(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\cvx.m
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 7.
 
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\psnfss\omlptm.fd"
@@ -532,7 +531,7 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 <./solution1.png, id=17, 449.68pt x 337.26pt>
 File: ./solution1.png Graphic file (type png)
  <use ./solution1.png>
-Package pdftex.def Info: ./solution1.png used on input line 125.
+Package pdftex.def Info: ./solution1.png used on input line 130.
 (pdftex.def)             Requested size: 226.79846pt x 170.10138pt.
  [2 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report/solution1.png (PNG copy)>
 ]
@@ -540,11 +539,11 @@ Package pdftex.def Info: ./solution1.png used on input line 125.
 Here is how much of TeX's memory you used:
  4516 strings out of 493921
  63746 string characters out of 3146873
- 130114 words of memory out of 3000000
+ 131114 words of memory out of 3000000
  7770 multiletter control sequences out of 15000+200000
  37921 words of font info for 76 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,8n,32p,723b,1520s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,8n,32p,723b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program F
 iles/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9_/
 fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
@@ -558,7 +557,7 @@ les/MiKTeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9_/
 fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw
 /times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on relatorio.pdf (2 pages, 130814 bytes).
+Output written on relatorio.pdf (2 pages, 133658 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

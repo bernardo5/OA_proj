@@ -90,15 +90,20 @@ A \textit{constraint} $1^\top \omega = 1$ indica que a soma dos investimentos no
 %Falar com o professor
 Na prática esta situação poderia existir, no caso de termos capital num dado \textit{asset} e a melhor solução ser retirar o capital deste para investir noutro mais lucrativo.
 
+Ao analisar a função que queremos otimizar, verifica-se que é quadrática, ou seja, do tipo $x^\top Ax+b^\top x+c$.
+Para o contexto em questão, tem-se que maximize $\mu^\top \omega - \gamma \omega^\top \Sigma \omega \equiv$ minimize $\gamma \omega^\top \Sigma \omega + (- \mu^\top) \omega \equiv$ minimize $\omega^\top \gamma \Sigma \omega + (- \mu^\top) \omega$.
+
+Sendo a matriz das covariâncias semi-definida positiva e simétrica, verifica-se que a nossa função é realmente quadrática sendo $A = \gamma \Sigma$, $b = -\mu$ e $c=0$. Sendo a função quadrática, podemos também concluir, que é convexa. Desta forma, a otimização será feita de acordo com esta propriedade.
+
 \section{CVX}
 \label{sec:cvx}
-Por forma a implementar a solução apresentada na equação 1, utilizou-se o \textit{software CVX}\cite{CVX}. De seguida apresenta-se a parte do código de \textit{Matlab} onde se utiliza o \textit{CVX}.
+Por forma a implementar a solução apresentada na equação 1, e sendo esta convexa, utilizou-se o \textit{software CVX}\cite{CVX}. De seguida apresenta-se a parte do código de \textit{Matlab} onde se utiliza o \textit{CVX}.
 
 \lstinputlisting{cvx.m}
 
-
 \section{Barrier Method}
 \label{sec:barrier-method}
+
 
 
 \section{Numerical results}
