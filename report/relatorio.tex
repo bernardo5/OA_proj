@@ -86,7 +86,7 @@ Apresenta-se de seguida a descrição das variáveis da função de otimização
 \item $\gamma \omega^\top \Sigma \omega \rightarrow$ representa a variância do retorno do portfólio. É o parâmetro que mede o risco de investimento;
 \end{itemize}
 
-A \textit{constraint} $1^\top \omega = 1$ indica que a soma dos investimentos no portfólio não pode ultrapassar o capital inicial. Note-se que os investimentos são uma fração do capital inicial e não o seu valor absoluto. Ao forçar que $\omega \in \mathbb{R}_+^n$ indica que não podem existir investimentos negativos. 
+A \textit{constraint} $1^\top \omega = 1$ indica que a soma dos investimentos no portfólio deve corresponder ao capital inicial que se pretende investir. Note-se que os investimentos são uma fração do capital inicial e não o seu valor absoluto. Ao forçar que $\omega \in \mathbb{R}_+^n$ indica que não podem existir investimentos negativos. 
 %Falar com o professor
 Na prática esta situação poderia existir, no caso de termos capital num dado \textit{asset} e a melhor solução ser retirar o capital deste para investir noutro mais lucrativo.
 
@@ -104,7 +104,48 @@ Por forma a implementar a solução apresentada na equação 1, e sendo esta con
 \section{Barrier Method}
 \label{sec:barrier-method}
 
+Por forma a melhorar o tempo de otimização, utiliza-se o \textit{Barrier Method}. Pela impossibilidade de aplicação deste método com a formulação anterior devido à \textit{constraint} \: $1^\top\omega=1$, foi necessário recorrer a uma mudança de variável.
 
+Deste modo, define-se $\omega$ pela equação (2). 
+
+\begin{equation}
+\omega = D z + b
+\end{equation}
+
+As matrizes serão as seguintes:
+\vskip 4mm
+$D_{n,n-1} = 
+ \begin{pmatrix}
+  1 & 0 & 0 & \cdots & 0 \\
+  0 & 1 & 0 & \cdots & 0 \\
+  0 & 0 & 1 & \cdots & 0 \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & 0 & \cdots & 1 \\
+  -1 & -1 &-1 & \cdots & -1
+ \end{pmatrix}
+$
+\vskip 4mm
+$z_{n-1,1} = 
+\begin{pmatrix}
+  z_{1} \\
+  z_{2}\\
+  \vdots  \\
+  z_{n-1}  
+ \end{pmatrix}
+$ \: \: \: \: \: \: \:
+$
+b_{n,1} = 
+\begin{pmatrix}
+  0 \\
+  0\\
+  \vdots  \\
+  1  
+ \end{pmatrix}
+$
+\vskip 4mm
+Com esta mudança de variável, a nova variável de otimização \textit{z}, tem menos um grau de liberdade que a anterior, $\omega$. O último investimento será assim a percentagem em falta do capital inicial. 
+
+Esta condição é conseguida através da equação matricial (2), onde a matriz \textit{D} é uma matriz identidade nas primeiras \textit{n-1} linhas e a última ser uma linha de "-1"'s; a matriz \textit{b} é uma matriz coluna de "0"'s com  apenas a ultima posição "1", sendo a \textit{constraint} referida anteriormente assim respeitada.
 
 \section{Numerical results}
 \label{sec:numerical-results}

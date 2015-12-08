@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  8 DEC 2015 10:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  8 DEC 2015 12:22
 entering extended mode
 **relatorio.tex
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\relatorio.tex
@@ -528,38 +528,42 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 7.
 )
+Underfull \hbox (badness 2351) in paragraph at lines 146--147
+[]\OT1/ptm/m/n/10 Com esta mudan[]a de vari[]avel, a nova vari[]avel de
+ []
+
 <./solution1.png, id=17, 449.68pt x 337.26pt>
 File: ./solution1.png Graphic file (type png)
  <use ./solution1.png>
-Package pdftex.def Info: ./solution1.png used on input line 130.
+Package pdftex.def Info: ./solution1.png used on input line 171.
 (pdftex.def)             Requested size: 226.79846pt x 170.10138pt.
  [2 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report/solution1.png (PNG copy)>
 ]
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report\relatorio.aux) ) 
 Here is how much of TeX's memory you used:
- 4516 strings out of 493921
- 63746 string characters out of 3146873
- 131114 words of memory out of 3000000
- 7770 multiletter control sequences out of 15000+200000
+ 4517 strings out of 493921
+ 63754 string characters out of 3146873
+ 132114 words of memory out of 3000000
+ 7771 multiletter control sequences out of 15000+200000
  37921 words of font info for 76 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,8n,32p,723b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,10n,32p,723b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program F
 iles/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9_/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsf
-onts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-<C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Fi
-les/MiKTeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9_/
-fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw
-/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on relatorio.pdf (2 pages, 133658 bytes).
+fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/P
+rogram Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Pro
+gram Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiK
+TeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
+ype1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/
+utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utmri8a.pfb>
+Output written on relatorio.pdf (2 pages, 145491 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
