@@ -107,6 +107,7 @@ Por forma a implementar a solução apresentada na equação 1, e sendo esta con
 Por forma a melhorar o tempo de otimização, utiliza-se um \textit{Interior Point Method}. Para esta abordagem, pretende-se reescrever o problema sob a forma de problema de otimização da seguinte forma:
 
 \begin{equation}
+\label{eq.ineq}
 \begin{array}[t]{ll} \text{minimize} & f_0(x) \\
 \text{subject to} & f_i(x) \leq 0 \\ &  Ax=b \end{array}
 \end{equation}
@@ -115,9 +116,10 @@ As \textit{constraints} de otimização devem portanto ser lineares ou inequaç�
 
 Pela impossibilidade de aplicação deste método com a formulação anterior devido à \textit{constraint} \: $1^\top\omega=1$, foi necessário recorrer a uma mudança de variável.
 
-Deste modo, define-se $\omega$ pela equação (3). 
+Deste modo, define-se $\omega$ pela equação \ref{eq.w}. 
 
 \begin{equation}
+\label{eq.w}
 \omega = D z + b
 \end{equation}
 
@@ -154,17 +156,34 @@ $
 \vskip 4mm
 Com esta mudança de variável, a nova variável de otimização \textit{z}, tem menos um grau de liberdade que a anterior, $\omega$. O último investimento será assim a percentagem em falta do capital inicial. 
 
-Esta condição é conseguida através da equação matricial (3), onde a matriz \textit{D} é uma matriz identidade nas primeiras \textit{n-1} linhas e a última ser uma linha de "-1"'s; a matriz \textit{b} é uma matriz coluna de "0"'s com  apenas a ultima posição "1", sendo a \textit{constraint} referida anteriormente assim respeitada.
+Esta condição é conseguida através da equação matricial \ref{eq.w}, onde a matriz \textit{D} é uma matriz identidade nas primeiras \textit{n-1} linhas e a última ser uma linha de "-1"'s; a matriz \textit{b} é uma matriz coluna de "0"'s com  apenas a ultima posição "1", sendo a \textit{constraint} referida anteriormente assim respeitada.
 
 %rever portugues----------------------------------------------------------------------------------------------
-Relativamente à segunda \textit{constraint}, $\omega \in \mathbb{R}_+^n$, com a mudança de variável efetuada, tem-se $D z + b \geq 0$. Como tal, o problema descrito em (2) adaptado à situação em causa ficará escrito da seguinte forma:
+Relativamente à segunda \textit{constraint}, $\omega \in \mathbb{R}_+^n$, com a mudança de variável efetuada, tem-se $D z + b \geq 0$. Como tal, o problema descrito em \ref{eq.ineq} adaptado à situação em causa ficará escrito da seguinte forma:
 %-------------------------------------------------------------------------------------------------------
 \begin{equation}
+\label{subs}
 \begin{array}[t]{ll} \text{minimize} & -\mu^\top (D z + b) + \gamma (D z + b)^\top \Sigma (D z + b) \\
 \text{subject to} & -D z - b \leq 0 \end{array}
 \end{equation}
 
 Os $f_i(x)$ são assim $f_i(x) = -\delta_i^\top z - b_i$ onde $\delta_i^\top$ representa a linha \textit{i} da matriz \textit{D}.
+
+Pretende-se utilizar o \textit{Barrier Method}, que otimiza formulações semelhantes às de \ref{eq.barrier}, onde $I\_f_i(x)$ representa uma barreira, ou seja, para $f_i(x) \leq 0$, tem valor nulo sendo infinito para os restantes.
+
+\begin{equation}
+\label{eq.barrier}
+\begin{array}[t]{ll} \text{minimize} & f_0(x) + \sum_{i=1}^{m} I\_(f_i(x)) \\
+\text{subject to} &  Ax=b \end{array}
+\end{equation}
+
+Não sendo possível a implementação de funções não diferenciáveis, faz-se uma aproximação logarítmica da barreira, reformulando \ref{eq.barrier} em \ref{eq.log-bar}.
+
+\begin{equation}
+\label{eq.log-bar}
+\begin{array}[t]{ll} \text{minimize} & f_0(x) + (1/t) \sum_{i=1}^{m} log(f_i(x)) \\
+\text{subject to} &  Ax=b \end{array}
+\end{equation}
 
 \section{Numerical results}
 \label{sec:numerical-results}
