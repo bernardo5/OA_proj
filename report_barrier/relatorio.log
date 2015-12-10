@@ -1,10 +1,19 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.11)  10 DEC 2015 00:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  10 DEC 2015 18:38
 entering extended mode
 **relatorio.tex
-(relatorio.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ieeetran\IEEEtran.cls"
+(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9_\tex\latex\ieeetran\IEEEtran.cls"
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -17,7 +26,7 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 210mm x 297mm (a4) paper.
@@ -111,20 +120,20 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+) ("C:\Program Files\MiKTeX 2.9_\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+("C:\Program Files\MiKTeX 2.9_\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+("C:\Program Files\MiKTeX 2.9_\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -273,8 +282,8 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+("C:\Program Files\MiKTeX 2.9_\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -304,8 +313,8 @@ File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+("C:\Program Files\MiKTeX 2.9_\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -328,31 +337,31 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9_\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+("C:\Program Files\MiKTeX 2.9_\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9_\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count94
@@ -360,24 +369,24 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen128
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen129
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count95
@@ -418,14 +427,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\listings\listings.sty"
 \lst@mode=\count107
 \lst@gtempboxa=\box30
 \lst@token=\toks23
@@ -439,22 +448,22 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \lst@lineno=\count112
 \lst@maxwidth=\dimen140
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count113
 \lst@skipnumbers=\count114
 \lst@framebox=\box31
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\listings\listings.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\algorithms\algorithmic.sty"
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+("C:\Program Files\MiKTeX 2.9_\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@ALC@unique=\count115
 \c@ALC@line=\count116
@@ -463,14 +472,14 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \ALC@tlm=\skip47
 \algorithmicindent=\skip48
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\subfig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
+("C:\Program Files\MiKTeX 2.9_\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
+("C:\Program Files\MiKTeX 2.9_\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen141
 \captionmargin@=\dimen142
@@ -514,7 +523,7 @@ Package caption Info: listings package is loaded.
 \c@lotdepth=\count126
 \sf@top=\skip52
 \sf@bottom=\skip53
-) (relatorio.aux)
+) (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
@@ -529,7 +538,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 
 -- Lines per column: 58 (exact).
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("C:\Program Files\MiKTeX 2.9_\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count127
 \scratchdimen=\dimen149
@@ -551,35 +560,36 @@ Package caption Info: End \AtBeginDocument code.
 ** WARNING: \and is valid only when in conference or peerreviewca
 modes (line 33).
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 33.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 50.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
 LaTeX Font Info:    Try loading font information for U+msa on input line 69.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 69.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \vbox (badness 5908) has occurred while \output is active []
 
- [1{C:/Users/Tomás/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-] (cvx.m
+]
+(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\cvx.m
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 7.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+("C:\Program Files\MiKTeX 2.9_\tex\latex\psnfss\omlptm.fd"
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
@@ -589,100 +599,96 @@ Underfull \hbox (badness 2351) in paragraph at lines 161--162
 []\OT1/ptm/m/n/10 Com esta mudan[]a de vari[]avel, a nova vari[]avel de
  []
 
-
-Underfull \hbox (badness 5161) in paragraph at lines 176--177
-[]\OT1/ptm/m/n/10 Pretende-se uti-lizar o \OT1/ptm/m/it/10 Bar-rier Method\OT1/
-ptm/m/n/10 , que otimiza
- []
-
 <log-barrier.png, id=17, 319.94531pt x 152.06813pt>
 File: log-barrier.png Graphic file (type png)
  <use log-barrier.png>
-Package pdftex.def Info: log-barrier.png used on input line 199.
+Package pdftex.def Info: log-barrier.png used on input line 196.
 (pdftex.def)             Requested size: 226.79846pt x 107.79741pt.
 
-[2 <./log-barrier.png>]
+[2 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/log-barrier.png>]
 <./iterations_dua_gap.png, id=22, 310.15875pt x 188.95593pt>
 File: ./iterations_dua_gap.png Graphic file (type png)
 
 <use ./iterations_dua_gap.png>
-Package pdftex.def Info: ./iterations_dua_gap.png used on input line 281.
+Package pdftex.def Info: ./iterations_dua_gap.png used on input line 221.
 (pdftex.def)             Requested size: 226.79846pt x 138.17021pt.
- [3 <./iterations_dua_gap.png>]
+ [3 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/iterations_dua_ga
+p.png>]
 <./gama_0.jpg, id=27, 562.1pt x 421.575pt>
 File: ./gama_0.jpg Graphic file (type jpg)
  <use ./gama_0.jpg>
-Package pdftex.def Info: ./gama_0.jpg used on input line 308.
+Package pdftex.def Info: ./gama_0.jpg used on input line 305.
 (pdftex.def)             Requested size: 226.79846pt x 170.1001pt.
 
 <./gama_100.jpg, id=28, 562.1pt x 421.575pt>
 File: ./gama_100.jpg Graphic file (type jpg)
  <use ./gama_100.jpg>
-Package pdftex.def Info: ./gama_100.jpg used on input line 321.
+Package pdftex.def Info: ./gama_100.jpg used on input line 318.
 (pdftex.def)             Requested size: 226.79846pt x 170.1001pt.
 
 <./gama_100_positivos.jpg, id=29, 562.1pt x 421.575pt>
 File: ./gama_100_positivos.jpg Graphic file (type jpg)
 
 <use ./gama_100_positivos.jpg>
-Package pdftex.def Info: ./gama_100_positivos.jpg used on input line 332.
+Package pdftex.def Info: ./gama_100_positivos.jpg used on input line 329.
 (pdftex.def)             Requested size: 226.79846pt x 170.1001pt.
  <./miu_igual.jpg, id=30, 562.1pt x 421.575pt>
 File: ./miu_igual.jpg Graphic file (type jpg)
 
 <use ./miu_igual.jpg>
-Package pdftex.def Info: ./miu_igual.jpg used on input line 344.
+Package pdftex.def Info: ./miu_igual.jpg used on input line 341.
 (pdftex.def)             Requested size: 226.79846pt x 170.1001pt.
 
-Underfull \vbox (badness 2990) has occurred while \output is active []
-
- [4 <./gama_0.jpg> <./gama_100.jpg> <./gama_100_positivos.jpg> <./miu_igual.jpg
->]
-<./miu_igual_risco_diferente.jpg, id=34, 562.1pt x 421.575pt>
+<./miu_igual_risco_diferente.jpg, id=31, 562.1pt x 421.575pt>
 File: ./miu_igual_risco_diferente.jpg Graphic file (type jpg)
 
 <use ./miu_igual_risco_diferente.jpg>
-Package pdftex.def Info: ./miu_igual_risco_diferente.jpg used on input line 356
+Package pdftex.def Info: ./miu_igual_risco_diferente.jpg used on input line 353
 .
 (pdftex.def)             Requested size: 226.79846pt x 170.1001pt.
-
-<./solution1.png, id=35, 449.68pt x 337.26pt>
+ [4 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_0.jpg> <C:/B
+G-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_100.jpg> <C:/BG-files
+/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_100_positivos.jpg>] <./solut
+ion1.png, id=35, 449.68pt x 337.26pt>
 File: ./solution1.png Graphic file (type png)
- <use ./solution1.png>
-Package pdftex.def Info: ./solution1.png used on input line 374.
+
+<use ./solution1.png>
+Package pdftex.def Info: ./solution1.png used on input line 371.
 (pdftex.def)             Requested size: 226.79846pt x 170.10138pt.
 
-Overfull \hbox (11.00662pt too wide) in paragraph at lines 405--406
+Overfull \hbox (11.00662pt too wide) in paragraph at lines 402--403
 []\OT1/ptm/m/n/8 [BV[]CVXSLIDES] \OT1/pcr/m/n/8 https://web.stanford.edu/boyd/c
 vxbook/
  []
 
-[5 <./miu_igual_risco_diferente.jpg> <./solution1.png (PNG copy)>]
-(relatorio.aux) ) 
+[5 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/miu_igual.jpg> <C:
+/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/miu_igual_risco_diferent
+e.jpg> <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/solution1.png 
+(PNG copy)>]
+(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux) ) 
 Here is how much of TeX's memory you used:
- 5942 strings out of 493673
- 88181 string characters out of 3141526
- 172170 words of memory out of 3000000
- 9225 multiletter control sequences out of 15000+200000
+ 5932 strings out of 493921
+ 88020 string characters out of 3146873
+ 171257 words of memory out of 3000000
+ 9160 multiletter control sequences out of 15000+200000
  39057 words of font info for 77 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
+ 841 hyphenation exceptions out of 8191
  44i,10n,42p,1576b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r
-.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on relatorio.pdf (5 pages, 340870 bytes).
+{C:/P
+rogram Files/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKT
+eX 2.9_/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9_
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/ams
+fonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Pr
+ogram Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Prog
+ram Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKT
+eX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/ty
+pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/u
+tmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utmri8a.pfb>
+Output written on relatorio.pdf (5 pages, 341202 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
