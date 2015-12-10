@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  10 DEC 2015 18:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  10 DEC 2015 18:40
 entering extended mode
 **relatorio.tex
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.tex
@@ -599,10 +599,10 @@ Underfull \hbox (badness 2351) in paragraph at lines 161--162
 []\OT1/ptm/m/n/10 Com esta mudan[]a de vari[]avel, a nova vari[]avel de
  []
 
-<log-barrier.png, id=17, 319.94531pt x 152.06813pt>
-File: log-barrier.png Graphic file (type png)
- <use log-barrier.png>
-Package pdftex.def Info: log-barrier.png used on input line 196.
+<./log-barrier.png, id=17, 319.94531pt x 152.06813pt>
+File: ./log-barrier.png Graphic file (type png)
+ <use ./log-barrier.png>
+Package pdftex.def Info: ./log-barrier.png used on input line 196.
 (pdftex.def)             Requested size: 226.79846pt x 107.79741pt.
 
 [2 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/log-barrier.png>]
@@ -668,7 +668,7 @@ e.jpg> <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/solution1.png
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux) ) 
 Here is how much of TeX's memory you used:
  5932 strings out of 493921
- 88020 string characters out of 3146873
+ 88028 string characters out of 3146873
  171257 words of memory out of 3000000
  9160 multiletter control sequences out of 15000+200000
  39057 words of font info for 77 fonts, out of 3000000 for 9000
