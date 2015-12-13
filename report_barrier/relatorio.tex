@@ -118,6 +118,38 @@ Para esta abordagem, pretende-se reescrever o problema sob a forma de problema d
 
 As \textit{constraints} de otimização devem portanto ser lineares ou inequações do tipo acima descrito em que os $f_i$ são convexos e duas vezes diferenciáveis.
 
+Por forma a traduzir a formulação de (\ref{eq.ineq}) numa formulação de um \textit{Equality-constrained smooth problem}, e utilizando \textit{Unconstrained Minimization Technique}, obtem-se (\ref{eq.log-bar}), que é uma aproximação de (\ref{eq.barrier}).
+
+\begin{equation}
+\label{eq.barrier}
+\begin{array}[t]{ll} \text{minimize} & f_0(x) + \sum_{i=1}^{m} I\_(f_i(x)) \\
+\text{subject to} &  Ax=b \end{array}
+\end{equation}
+
+\begin{equation}
+\label{eq.log-bar}
+\begin{array}[t]{ll} \text{minimize} & f_0(x) + (1/t) \sum_{i=1}^{m} log(f_i(x)) \\
+\text{subject to} &  Ax=b \end{array}
+\end{equation}
+
+Em (\ref{eq.barrier}), $I\_f_i(x)$ é a função indicadora e representa uma barreira para a função de custo, ou seja, para $f_i(x) \leq 0$, tem valor nulo sendo infinito para os restantes. Isto traduz-se na penalização infinita caso as \textit{constraints} se aproximem da violação das condições impostas pelas inequações. Na equação (\ref{eq.log-bar}), $(1/t) log(f_i(x))$ representa a \textit{log barrier}, ou seja, a aproximação da barreira à função indicadora. À medida que \textit{t} aumenta, a \textit{log barrier} aproxima melhor a função indicadora, obtendo-se assim resultados cada vez mais semelhantes à solução ótima. Está ilustrado na figura \ref{fig:barrier} o aumento de \textit{t} e a sua consequência na \textit{log barrier}.
+
+%PERGUNTAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! CENTRAR
+\begin{figure}[htp]
+  \centering
+  \captionsetup{font=scriptsize} 
+  \includegraphics[width=0.9\columnwidth]{./log-barrier}
+  \caption{Aproximação da função indicadora por vários valores de \textit{t}}
+  \label{fig:barrier}
+\end{figure}
+
+Não sendo possível a implementação de funções não diferenciáveis, faz-se uma aproximação logarítmica, representada em (\ref{eq.log-bar}), da barreira onde é possível aplicar o método de \textit{Newton}, pelo facto de a nova formulação ser \textit{smooth}. Desta forma, escolhendo uma tolerância e um valor para \textit{t}, será possível obter uma solução sub-ótima para o problema em apenas uma iteração. No entanto, não tendo forma de escolher o valor de \textit{t} mais apropriado, utiliza-se o \textit{Barrier Method} que permite efetuar várias otimizações da função $f(z)$, \textit{homotopy method}.
+À medida que \textit{t} tende para um valor elevado, espera-se que o valor sub ótimo, $x^\ast(t)$, se aproxime do valor ideal, $x^\ast$. Quando \textit{t} tende para infinito espera-se que $x^\ast(t)$ tenda para $x^\ast$, e que este valor seja a solução do nosso problema. As soluções de cada iteração estão situadas ao longo do \textit{central path} que corresponde ao conjunto de soluções $x^\ast(t)$. Estas soluções são caracterizadas pelas \textit{KKT Conditions} e são, usualmente, denominadas de \textit{central points}. O \textit{Barrier Method} é iterativo, pelo que, a cada iteração, chamada \textit{outer iteration}, é computada uma solução sub ótima, esta solução é depois utilizada com ponto inicial de próxima iteração, estende-se esta computação até que o \textit{stopping criterion} seja verificado. A cada iteração o valor de \textit{t} é aumentado por um fator $\mu$, este fator é denominado de \textit{barrier parameter} e controla o valor que a \textit{log barrier} toma. O \textit{stopping criterion} é obtido através do \textit{duality gap} e é dado por $f(x^\ast(t))-f^\ast \leq m/t$, em que m é o número de \textit{contraints} existentes no problema e $f(x^\ast(t))-f^\ast$ o \textit{duality gap}, ou seja, a diferença entre a solução sub ótima e a ótima, e irá ser substituído por $\epsilon$, ou nível de precisão, como se observa na descrição do método. Como referido acima, espera-se que, quando \textit{t} tenda para infinito, $f(x^\ast(t))-f^\ast$ tenda para zero.
+
+No \textit{Barrier Method} a escolha dos parâmetros \textit{t} e $\mu$ é de grande importância. Caso $\mu$ seja muito pequeno irão ser necessárias muitas \textit{outer iterations}, visto que o aumento de \textit{t} será reduzido, por outro lado, caso $\mu$ seja muito elevado, irão ser necessárias muitas iterações do método de \textit{Newton}, já que as soluções sub ótimas de iterações consecutivas irão estar muito afastadas entre si. Quanto ao valor de \textit{t} inicial, se este for muito pequeno, irão ser também necessárias muitas \textit{outer iterations}, a adaptação à função indicadora será feita lentamente, caso \textit{t} inicial seja muito elevado, a primeira iteração do método de \textit{Newton} (\textit{first centering step}) irá requerir muitas iterações para calcular $x^\ast$ inicial.
+
+
+
 Pela impossibilidade de aplicação deste método com a formulação anterior devido à \textit{constraint} \: $1^\top\omega=1$, foi necessário recorrer a uma mudança de variável.
 
 Deste modo, define-se $\omega$ pela equação (\ref{eq.w}). 
@@ -173,59 +205,11 @@ Relativamente à segunda \textit{constraint}, $\omega \in \mathbb{R}_+^n$, com a
 
 Os $f_i(x)$ são assim $f_i(x) = -\delta_i^\top z - b_i$ onde $\delta_i^\top$ representa a linha \textit{i} da matriz \textit{D}.
 
-Por forma a traduzir a formulação de (\ref{eq.subs}) numa formulação de um \textit{Equality-constrained smooth problem}, e utilizando \textit{Unconstrained Minimization Technique}, obtem-se (\ref{eq.log-bar}), que é uma aproximação de (\ref{eq.barrier}).
 
-\begin{equation}
-\label{eq.barrier}
-\begin{array}[t]{ll} \text{minimize} & f_0(x) + \sum_{i=1}^{m} I\_(f_i(x)) \\
-\text{subject to} &  Ax=b \end{array}
-\end{equation}
 
-\begin{equation}
-\label{eq.log-bar}
-\begin{array}[t]{ll} \text{minimize} & f_0(x) + (1/t) \sum_{i=1}^{m} log(f_i(x)) \\
-\text{subject to} &  Ax=b \end{array}
-\end{equation}
+%AQUI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-Em (\ref{eq.barrier}), $I\_f_i(x)$ é a função indicadora e representa uma barreira para a função de custo, ou seja, para $f_i(x) \leq 0$, tem valor nulo sendo infinito para os restantes. Isto traduz-se na penalização infinita caso as \textit{constraints} da formulação (\ref{eq.subs}) se aproximem da violação das condições impostas pelas inequações. Na equação (\ref{eq.log-bar}), $(1/t) log(f_i(x))$ representa a \textit{log barrier}, ou seja, a aproximação da barreira à função indicadora. À medida que \textit{t} aumenta, a \textit{log barrier} aproxima melhor a função indicadora, obtendo-se assim resultados cada vez mais semelhantes à solução ótima. Está ilustrado na figura \ref{fig:barrier} o aumento de \textit{t} e a sua consequência na \textit{log barrier}.
-
-%PERGUNTAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! CENTRAR
-\begin{figure}[htp]
-  \centering
-  \captionsetup{font=scriptsize} 
-  \includegraphics[width=0.9\columnwidth]{./log-barrier}
-  \caption{Aproximação da função indicadora por vários valores de \textit{t}}
-  \label{fig:barrier}
-\end{figure}
-
-Não sendo possível a implementação de funções não diferenciáveis, faz-se uma aproximação logarítmica, representada em (\ref{eq.log-bar}), da barreira onde é possível aplicar o método de \textit{Newton}, pelo facto de a nova formulação ser \textit{smooth}. Desta forma, escolhendo uma tolerância e um valor para \textit{t}, será possível obter uma solução sub-ótima para o problema em apenas uma iteração. No entanto, não tendo forma de escolher o valor de \textit{t} mais apropriado, utiliza-se o \textit{Barrier Method} que permite efetuar várias otimizações da função $f(z)$, \textit{homotopy method}.
-À medida que \textit{t} tende para um valor elevado, espera-se que o valor sub ótimo, $x^\ast(t)$, se aproxime do valor ideal, $x^\ast$. Quando \textit{t} tende para infinito espera-se que $x^\ast(t)$ tenda para $x^\ast$, e que este valor seja a solução do nosso problema. As soluções de cada iteração estão situadas ao longo do \textit{central path} que corresponde ao conjunto de soluções $x^\ast(t)$. Estas soluções são caracterizadas pelas \textit{KKT Conditions} e são, usualmente, denominadas de \textit{central points}. O \textit{Barrier Method} é iterativo, pelo que, a cada iteração, chamada \textit{outer iteration}, é computada uma solução sub ótima, esta solução é depois utilizada com ponto inicial de próxima iteração, estende-se esta computação até que o \textit{stopping criterion} seja verificado. A cada iteração o valor de \textit{t} é aumentado por um fator $\mu$, este fator é denominado de \textit{barrier parameter} e controla o valor que a \textit{log barrier} toma. O \textit{stopping criterion} é obtido através do \textit{duality gap} e é dado por $f(x^\ast(t))-f^\ast \leq m/t$, em que m é o número de \textit{contraints} existentes no problema e $f(x^\ast(t))-f^\ast$ o \textit{duality gap}, ou seja, a diferença entre a solução sub ótima e a ótima, e irá ser substituído por $\epsilon$, ou nível de precisão, como se observa na descrição do método. Como referido acima, espera-se que, quando \textit{t} tenda para infinito, $f(x^\ast(t))-f^\ast$ tenda para zero.
-
-A implementação do algoritmo \textit{Barrier Method}\cite{BARRIER} seguirá o seguinte pseudo-código:
-
-\begin{algorithmic}[1]
-\renewcommand{\algorithmicrequire}{\textbf{Input:}}
-\REQUIRE $x \textit{ strictly feasible}, t > 0, \mu > 1, \epsilon > 0$
-
-\STATE obtenção de $x^* (t)$ pela minimização de $t f_0 + \phi$
-\STATE Atualização de $x:=x^* (t)$
-\STATE \textbf{If}($m/t < \epsilon$) \textbf{then} Stop
-\STATE Incremento de $t$. $t:=\mu t$.
-\end{algorithmic}
-
-No \textit{Barrier Method} a escolha dos parâmetros \textit{t} e $\mu$ é de grande importância. Caso $\mu$ seja muito pequeno irão ser necessárias muitas \textit{outer iterations}, visto que o aumento de \textit{t} será reduzido, por outro lado, caso $\mu$ seja muito elevado, irão ser necessárias muitas iterações do método de \textit{Newton}, já que as soluções sub ótimas de iterações consecutivas irão estar muito afastadas entre si. Quanto ao valor de \textit{t} inicial, se este for muito pequeno, irão ser também necessárias muitas \textit{outer iterations}, a adaptação à função indicadora será feita lentamente, caso \textit{t} inicial seja muito elevado, a primeira iteração do método de \textit{Newton} (\textit{first centering step}) irá requerir muitas iterações para calcular $x^\ast$ inicial.
-
-\begin{figure}[htp]
-\captionsetup{font=scriptsize}  
-  \centering
-  \includegraphics[width=0.9\columnwidth]{./iterations_dua_gap}
-  \caption{Número de iterações de \textit{Newton} em relação a $\mu$}
-  \label{fig:gamma}
-\end{figure}
-
-Na figura \ref{fig:gamma} está representada a relação entre $\mu$ e o número de iterações do método de \textit{Newton} e, como se pode observar existe um grande discrepância no número de iterações entre $\mu$ igual 2 e a 50. Pelo que o $\mu$ sugerido por \textit{Boyd e Vandenberghe} está entre os valores 10 e 50.
-
-Neste algoritmo, faz-se no primeiro passo a minimização com recurso ao método de \textit{Newton}, sendo a função utilizada a apresentada na equação (\ref{eq.Newton}),
+Neste algoritmo, faz-se num primeiro passo a minimização com recurso ao método de \textit{Newton}, sendo a função utilizada a apresentada na equação (\ref{eq.Newton}),
 
 \begin{equation}
 \label{eq.Newton}
