@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  13 DEC 2015 19:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  13 DEC 2015 20:14
 entering extended mode
 **relatorio.tex
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.tex
@@ -658,33 +658,29 @@ vxbook/
  <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/miu_igual_risco_dife
 rente.jpg> <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/solution1.
 png (PNG copy)>]
-(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux) ) 
 Here is how much of TeX's memory you used:
- 5896 strings out of 493921
- 87638 string characters out of 3146873
+ 5895 strings out of 493921
+ 87627 string characters out of 3146873
  165257 words of memory out of 3000000
- 9125 multiletter control sequences out of 15000+200000
+ 9124 multiletter control sequences out of 15000+200000
  39057 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  44i,10n,42p,1576b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
-es/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9_/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/pub
-lic/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
-C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Fil
-es/MiKTeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9_/f
-onts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/
-times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utmri8a.pf
-b>
+{C:/P
+rogram Files/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKT
+eX 2.9_/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9_
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/ams
+fonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Pr
+ogram Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Prog
+ram Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKT
+eX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/ty
+pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/u
+tmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utmri8a.pfb>
 Output written on relatorio.pdf (5 pages, 327621 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
