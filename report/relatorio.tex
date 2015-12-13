@@ -106,7 +106,9 @@ Por forma a implementar a solução apresentada na equação 1, e sendo esta con
 \section{Barrier Method}
 \label{sec:barrier-method}
 
-Por forma a melhorar o tempo de otimização, utiliza-se um \textit{Interior Point Method}. Para esta abordagem, pretende-se reescrever o problema sob a forma de problema de otimização da seguinte forma:
+Por forma a melhorar o tempo de otimização, utilizou-se um \textit{Interior Point Method}, visto que o problema pertence à categoria dos \textit{Inequality and equality-constrained smooth problems}, categoria esta que é reduzida para uma sequência de \textit{Equality-constrained smooth problems}, a partir da utilização de \textit{Interior Point Methods}. Iremos descrever como fizémos esta transformação ao longo do capítulo.
+
+Para esta abordagem, pretende-se reescrever o problema sob a forma de problema de otimização da seguinte forma:
 
 \begin{equation}
 \label{eq.ineq}
@@ -158,20 +160,20 @@ $
 \vskip 4mm
 Com esta mudança de variável, a nova variável de otimização \textit{z}, tem menos um grau de liberdade que a anterior, $\omega$. O último investimento será assim a percentagem em falta do capital inicial. 
 
-Esta condição é conseguida através da equação matricial (\ref{eq.w}), onde a matriz \textit{D} é uma matriz identidade nas primeiras \textit{n-1} linhas e a última ser uma linha de "-1"'s; a matriz \textit{b} é uma matriz coluna de "0"'s com  apenas a ultima posição "1", sendo a \textit{constraint} referida anteriormente assim respeitada.
+Esta condição é conseguida através da equação matricial (\ref{eq.w}), onde a matriz \textit{D} é uma matriz identidade nas primeiras \textit{n-1} linhas e a última linha desta matriz conter apenas "-1"'s; a matriz \textit{b} é uma matriz coluna de "0"'s com  apenas a ultima posição "1", sendo a \textit{constraint} referida anteriormente assim respeitada.
 
 %rever portugues----------------------------------------------------------------------------------------------
 Relativamente à segunda \textit{constraint}, $\omega \in \mathbb{R}_+^n$, com a mudança de variável efetuada, tem-se $D z + b \geq 0$. Como tal, o problema descrito pela equação (\ref{eq.ineq}) adaptado à situação em causa ficará escrito da seguinte forma:
 %-------------------------------------------------------------------------------------------------------
 \begin{equation}
-\label{subs}
+\label{eq.subs}
 \begin{array}[t]{ll} \text{minimize} & -\mu^\top (D z + b) + \gamma (D z + b)^\top \Sigma (D z + b) \\
 \text{subject to} & -D z - b \leq 0 \end{array}
 \end{equation}
 
 Os $f_i(x)$ são assim $f_i(x) = -\delta_i^\top z - b_i$ onde $\delta_i^\top$ representa a linha \textit{i} da matriz \textit{D}.
 
-Pretende-se utilizar o \textit{Barrier Method}, que otimiza formulações semelhantes às da equação (\ref{eq.barrier}), onde $I\_f_i(x)$ representa uma barreira, ou seja, para $f_i(x) \leq 0$, tem valor nulo sendo infinito para os restantes.
+Por forma a traduzir a formulação de (\ref{eq.subs}) numa formulação de um \textit{Equality-constrained smooth problem}, e utilizando \textit{Unconstrained Minimization Technique}, obtem-se (\ref{eq.log-bar}), que é uma aproximação de (\ref{eq.barrier}).
 
 \begin{equation}
 \label{eq.barrier}
@@ -179,25 +181,27 @@ Pretende-se utilizar o \textit{Barrier Method}, que otimiza formulações semelh
 \text{subject to} &  Ax=b \end{array}
 \end{equation}
 
-Não sendo possível a implementação de funções não diferenciáveis, faz-se uma aproximação logarítmica da barreira, reformulando a equação (\ref{eq.barrier}) em (\ref{eq.log-bar}).
-
 \begin{equation}
 \label{eq.log-bar}
 \begin{array}[t]{ll} \text{minimize} & f_0(x) + (1/t) \sum_{i=1}^{m} log(f_i(x)) \\
 \text{subject to} &  Ax=b \end{array}
 \end{equation}
 
-Para valores positivos de \textit{t}, $(1/t) log(f_i(x))$ será uma aproximação suave da barreira. Com o aumento do parâmetro \textit{t}, a aproximação utilizada será cada vez mais próxima da barreira ideal. A figura \ref{fig:barrier} ilustra a aproximação à barreira pretendida com a variação de \textit{t}.
+Em (\ref{eq.barrier}), $I\_f_i(x)$ é a função indicadora e representa uma barreira para a função de custo, ou seja, para $f_i(x) \leq 0$, tem valor nulo sendo infinito para os restantes. Isto traduz-se na penalização infinita caso as \textit{constraints} da formulação (\ref{eq.subs}) se aproximem da violação das condições impostas pelas inequações. Na equação (\ref{eq.log-bar}), $(1/t) log(f_i(x))$ representa a \textit{log barrier}, ou seja, a aproximação da barreira à função indicadora. À medida que \textit{t} aumenta, a \textit{log barrier} aproxima melhor a função indicadora, obtendo-se assim resultados cada vez mais semelhantes à solução ótima. Está ilustrado na figura \ref{fig:barrier} o aumento de \textit{t} e a sua consequência na \textit{log barrier}.
 
 %PERGUNTAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! CENTRAR
 \begin{figure}[htp]
   \centering
-  \includegraphics[width=0.9\columnwidth]{log-barrier.png}
-  \caption{Aproximação da barreira ideal para vários valores de \textit{t}}
+  \captionsetup{font=scriptsize} 
+  \includegraphics[width=0.9\columnwidth]{./log-barrier}
+  \caption{Aproximação da função indicadora por vários valores de \textit{t}}
   \label{fig:barrier}
 \end{figure}
 
-Com o problema reescrito, o algoritmo \textit{Barrier Method}\cite{BARRIER} implementado é o seguinte:
+Não sendo possível a implementação de funções não diferenciáveis, faz-se uma aproximação logarítmica, representada em (\ref{eq.log-bar}), da barreira onde é possível aplicar o método de \textit{Newton}, pelo facto de a nova formulação ser \textit{smooth}. Desta forma, escolhendo uma tolerância e um valor para \textit{t}, será possível obter uma solução sub-ótima para o problema em apenas uma iteração. No entanto, não tendo forma de escolher o valor de \textit{t} mais apropriado, utiliza-se o \textit{Barrier Method} que permite efetuar várias otimizações da função $f(z)$, \textit{homotopy method}.
+À medida que \textit{t} tende para um valor elevado, espera-se que o valor sub ótimo, $x^\ast(t)$, se aproxime do valor ideal, $x^\ast$. Quando \textit{t} tende para infinito espera-se que $x^\ast(t)$ tenda para $x^\ast$, e que este valor seja a solução do nosso problema. As soluções de cada iteração estão situadas ao longo do \textit{central path} que corresponde ao conjunto de soluções $x^\ast(t)$. Estas soluções são caracterizadas pelas \textit{KKT Conditions} e são, usualmente, denominadas de \textit{central points}. O \textit{Barrier Method} é iterativo, pelo que, a cada iteração, chamada \textit{outer iteration}, é computada uma solução sub ótima, esta solução é depois utilizada com ponto inicial de próxima iteração, estende-se esta computação até que o \textit{stopping criterion} seja verificado. A cada iteração o valor de \textit{t} é aumentado por um fator $\mu$, este fator é denominado de \textit{barrier parameter} e controla o valor que a \textit{log barrier} toma. O \textit{stopping criterion} é obtido através do \textit{duality gap} e é dado por $f(x^\ast(t))-f^\ast \leq m/t$, em que m é o número de \textit{contraints} existentes no problema e $f(x^\ast(t))-f^\ast$ o \textit{duality gap}, ou seja, a diferença entre a solução sub ótima e a ótima, e irá ser substituído por $\epsilon$, ou nível de precisão, como se observa na descrição do método. Como referido acima, espera-se que, quando \textit{t} tenda para infinito, $f(x^\ast(t))-f^\ast$ tenda para zero.
+
+A implementação do algoritmo \textit{Barrier Method}\cite{BARRIER} seguirá o seguinte pseudo-código:
 
 \begin{algorithmic}[1]
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
@@ -209,7 +213,17 @@ Com o problema reescrito, o algoritmo \textit{Barrier Method}\cite{BARRIER} impl
 \STATE Incremento de $t$. $t:=\mu t$.
 \end{algorithmic}
 
-%VERIFICAR se M ou n E PEDIR AO PROF PARA EXPLICAR CRITERIO DE PARAGEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+No \textit{Barrier Method} a escolha dos parâmetros \textit{t} e $\mu$ é de grande importância. Caso $\mu$ seja muito pequeno irão ser necessárias muitas \textit{outer iterations}, visto que o aumento de \textit{t} será reduzido, por outro lado, caso $\mu$ seja muito elevado, irão ser necessárias muitas iterações do método de \textit{Newton}, já que as soluções sub ótimas de iterações consecutivas irão estar muito afastadas entre si. Quanto ao valor de \textit{t} inicial, se este for muito pequeno, irão ser também necessárias muitas \textit{outer iterations}, a adaptação à função indicadora será feita lentamente, caso \textit{t} inicial seja muito elevado, a primeira iteração do método de \textit{Newton} (\textit{first centering step}) irá requerir muitas iterações para calcular $x^\ast$ inicial.
+
+\begin{figure}[htp]
+\captionsetup{font=scriptsize}  
+  \centering
+  \includegraphics[width=0.9\columnwidth]{./iterations_dua_gap}
+  \caption{Número de iterações de \textit{Newton} em relação a $\mu$}
+  \label{fig:gamma}
+\end{figure}
+
+Na figura \ref{fig:gamma} está representada a relação entre $\mu$ e o número de iterações do método de \textit{Newton} e, como se pode observar existe um grande discrepância no número de iterações entre $\mu$ igual 2 e a 50. Pelo que o $\mu$ sugerido por \textit{Boyd e Vandenberghe} está entre os valores 10 e 50.
 
 Neste algoritmo, faz-se no primeiro passo a minimização com recurso ao método de \textit{Newton}, sendo a função utilizada a apresentada na equação (\ref{eq.Newton}),
 
@@ -229,6 +243,8 @@ e
 \begin{equation}
 \phi = -\sum_{i=1}^{m} log(-f_i(x))
 \end{equation}
+
+O termo $\phi$ evita que a minimização com o método de Newton vá para soluções não permitidas, uma vez que a função de otimização assume o valor infinito (\textit{penalty}), obrigando o método de \textit{Newton} a calcular outro \textit{step} para encontrar uma solução viável.
 
 Para a aplicação do método de \textit{Newton}, é ainda necessário o cálculo do gradiente e da hessiana da função $f (z)$. Como tal, o gradiente é obtido da seguinte forma:
 
@@ -265,9 +281,12 @@ A expressão da hessiana será obtida de forma idêntica pelas equações (\ref{
 \nabla^2 \phi (z) = \sum_{i=1}^{m} \frac{1}{-f_i^2 (z)} \nabla f_i (z) (\nabla f_i (z))^\top
 \end{equation}
 
-O \textit{Barrier Method} permite efetuar várias otimizações da função $f(z)$, dependendo do valor de \textit{t} na iteração atual. 
-À medida que \textit{t} tende para um valor elevado, estamos a otimizar a função que mais se aproxima à pretendida, recorrendo à \textit{indicator function}.
-O termo $\phi$ da função evita que a minimização com o método de Newton vá para soluções não permitidas, uma vez que a função em causa vai para um valor infinito (\textit{penalty}) e assim o método de newton procura encontrar outro \textit{step} para encontrar uma solução viável. Por último o \textit{Barrier Method} converge num número finito de passos indicado pelo ponto três do algoritmo.
+Por último, o \textit{Barrier Method} converge num número finito de iterações pelo indicado pelo ponto três do algoritmo. O número de \textit{centering steps} requerido ao \textit{Barrier Method} para atingir um nível de precisão $\epsilon$ são:
+
+\begin{equation}
+\label{steps}
+\frac{log(\frac{m}{t^{(0)}\epsilon})}{log(\mu)} + 1
+\end{equation}
 
 \section{Resultados Numéricos}
 \label{sec:numerical-results}
