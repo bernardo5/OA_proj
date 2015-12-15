@@ -1,5 +1,5 @@
 %variable controling tradeoff betwen return and risk
-gama=10;
+gama=0.1;
 
 entries = 4;
 
@@ -20,14 +20,15 @@ b=zeros(entries,1);
 b(entries)=1;
 
 % generate random expected returns of the assets
-miu=rand(entries,1);
+%miu=rand(entries,1);
+miu=[0.25;0.25;0.25;0.25];
 
 %covariance matrix of the returns of assets in portfolio
-temp=rand(entries);
-cov=temp'*temp;
+% temp=rand(entries);
+% cov=temp'*temp;
 
-%cov(1,2)=4;
-%cov(2,1)=4;
+%cov=[100 5 0.500000000000000 0.500000000000000;5 0.5 0.500000000000000 0.500000000000000;0.500000000000000 0.500000000000000 1 0.500000000000000;0.500000000000000 0.500000000000000 0.500000000000000 1];
+cov=[100 5 0.500000000000000 0.500000000000000;5 0.500000000000000 0.500000000000000 0.500000000000000;0.500000000000000 0.500000000000000 10 0.500000000000000;0.500000000000000 0.500000000000000 0.500000000000000 10];
 
 % %CVX solver
 % tic
@@ -119,6 +120,9 @@ z(entries)=1-sum(z);
     %hold on;
     subplot(1,3,2); stem(z,'g','LineWidth',5);
     title('portfolio');
+    hold on;
+    subplot(1,3,3); stem(gama*cov*z,'g','LineWidth',5);
+    title('risk');
     hold on;
 
 toc

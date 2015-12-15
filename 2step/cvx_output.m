@@ -28,7 +28,7 @@ i=1;
     subplot(1,3,2); stem(w,'r','LineWidth',5);
     title('portfolio');
     hold on;
-    subplot(1,3,3); stem(cov*w,'g','LineWidth',5);
+    subplot(1,3,3); stem(gama*w'*cov,'r','LineWidth',5);
     title('risk');
     hold on;
     
