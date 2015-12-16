@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  15 DEC 2015 22:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  16 DEC 2015 11:58
 entering extended mode
 **relatorio.tex
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.tex
@@ -523,59 +523,107 @@ Package caption Info: listings package is loaded.
 \c@lotdepth=\count126
 \sf@top=\skip52
 \sf@bottom=\skip53
-) (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+) ("C:\Program Files\MiKTeX 2.9_\tex\latex\adjustbox\adjustbox.sty"
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Program Files\MiKTeX 2.9_\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9_\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
+\XKV@depth=\count127
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+("C:\Program Files\MiKTeX 2.9_\tex\latex\adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Program Files\MiKTeX 2.9_\tex\latex\adjustbox\trimclip.sty"
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+("C:\Program Files\MiKTeX 2.9_\tex\latex\collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box32
+)
+\tc@llx=\dimen149
+\tc@lly=\dimen150
+\tc@urx=\dimen151
+\tc@ury=\dimen152
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Program Files\MiKTeX 2.9_\tex\latex\adjustbox\tc-pdftex.def"
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen153
+\adjbox@Height=\dimen154
+\adjbox@Depth=\dimen155
+\adjbox@Totalheight=\dimen156
+
+("C:\Program Files\MiKTeX 2.9_\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count128
+)
+("C:\Program Files\MiKTeX 2.9_\tex\latex\ltxmisc\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box33
+\sift@deathcycles=\count129
+\@vwid@loff=\dimen157
+\@vwid@roff=\dimen158
+))
+(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 -- Lines per column: 58 (exact).
 ("C:\Program Files\MiKTeX 2.9_\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
-\scratchdimen=\dimen149
-\scratchbox=\box32
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count130
-\MPscratchDim=\dimen150
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count130
+\scratchdimen=\dimen159
+\scratchbox=\box34
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen160
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks27
 )
-\c@lstlisting=\count133
+\c@lstlisting=\count136
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ** WARNING: \and is valid only when in conference or peerreviewca
-modes (line 33).
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 33.
+modes (line 34).
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 34.
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 51.
 
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
-LaTeX Font Info:    Try loading font information for U+msa on input line 69.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+LaTeX Font Info:    Try loading font information for U+msa on input line 70.
 
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 69.
+LaTeX Font Info:    Try loading font information for U+msb on input line 70.
 
 ("C:\Program Files\MiKTeX 2.9_\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -598,67 +646,75 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 <./log-barrier.png, id=17, 199.49532pt x 151.3153pt>
 File: ./log-barrier.png Graphic file (type png)
  <use ./log-barrier.png>
-Package pdftex.def Info: ./log-barrier.png used on input line 141.
+Package pdftex.def Info: ./log-barrier.png used on input line 142.
 (pdftex.def)             Requested size: 159.59645pt x 121.0524pt.
 
 [2 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/log-barrier.png>]
-Underfull \hbox (badness 2351) in paragraph at lines 194--195
+Underfull \hbox (badness 2351) in paragraph at lines 195--196
 []\OT1/ptm/m/n/10 Com esta mudan[]a de vari[]avel, a nova vari[]avel de
  []
 
-<./gama_0.jpg, id=24, 562.1pt x 421.575pt>
+<./gama_0.jpg, id=24, 351.56343pt x 289.08pt>
 File: ./gama_0.jpg Graphic file (type jpg)
  <use ./gama_0.jpg>
-Package pdftex.def Info: ./gama_0.jpg used on input line 282.
-(pdftex.def)             Requested size: 226.79846pt x 170.1001pt.
+Package pdftex.def Info: ./gama_0.jpg used on input line 283.
+(pdftex.def)             Requested size: 226.79846pt x 186.48824pt.
  [3 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_0.jpg>]
-<./gama_100.jpg, id=28, 562.1pt x 421.575pt>
+<./gama_100.jpg, id=28, 362.10281pt x 288.3272pt>
 File: ./gama_100.jpg Graphic file (type jpg)
  <use ./gama_100.jpg>
-Package pdftex.def Info: ./gama_100.jpg used on input line 295.
-(pdftex.def)             Requested size: 226.79846pt x 170.1001pt.
+Package pdftex.def Info: ./gama_100.jpg used on input line 296.
+(pdftex.def)             Requested size: 226.79846pt x 180.5912pt.
 
-<./miu_igual_risco_diferente.jpg, id=29, 562.1pt x 421.575pt>
+<./miu_igual_risco_diferente.jpg, id=29, 353.82187pt x 289.08pt>
 File: ./miu_igual_risco_diferente.jpg Graphic file (type jpg)
 
 <use ./miu_igual_risco_diferente.jpg>
-Package pdftex.def Info: ./miu_igual_risco_diferente.jpg used on input line 308
+Package pdftex.def Info: ./miu_igual_risco_diferente.jpg used on input line 309
 .
-(pdftex.def)             Requested size: 226.79846pt x 170.1001pt.
+(pdftex.def)             Requested size: 226.79846pt x 185.30168pt.
 
-Overfull \hbox (11.00662pt too wide) in paragraph at lines 343--344
+<./tempo_metodos.jpg, id=30, 849.92531pt x 411.78844pt>
+File: ./tempo_metodos.jpg Graphic file (type jpg)
+
+<use ./tempo_metodos.jpg>
+Package pdftex.def Info: ./tempo_metodos.jpg used on input line 327.
+(pdftex.def)             Requested size: 278.84215pt x 170.71307pt.
+
+Overfull \hbox (11.00662pt too wide) in paragraph at lines 346--347
 []\OT1/ptm/m/n/8 [BV[]CVXSLIDES] \OT1/pcr/m/n/8 https://web.stanford.edu/boyd/c
 vxbook/
  []
 
 [4 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_100.jpg> <C:/
 BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/miu_igual_risco_diferente
-.jpg>] (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux)
- ) 
+.jpg> <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/tempo_metodos.j
+pg>] (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux) )
+ 
 Here is how much of TeX's memory you used:
- 5876 strings out of 493921
- 87258 string characters out of 3146873
- 166257 words of memory out of 3000000
- 9108 multiletter control sequences out of 15000+200000
+ 6613 strings out of 493921
+ 98860 string characters out of 3146873
+ 179177 words of memory out of 3000000
+ 9812 multiletter control sequences out of 15000+200000
  39057 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,10n,42p,872b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
-es/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9_/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Pr
-ogram Files/MiKTeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKT
-eX 2.9_/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
-ype1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on relatorio.pdf (4 pages, 249633 bytes).
+ 44i,10n,75p,872b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files
+/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
+ 2.9_/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX
+ 2.9_/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/typ
+e1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on relatorio.pdf (4 pages, 369161 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

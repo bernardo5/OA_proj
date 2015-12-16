@@ -28,6 +28,7 @@ Financial Portfolio Optimization}
 \usepackage{listings}
 \usepackage{algorithmic}
 \usepackage{subfig}
+\usepackage[export]{adjustbox}
 
 \begin{document}
 \maketitle
@@ -271,7 +272,7 @@ Com esta reformulação é possível aplicar o \textit{Barrier Method} ao proble
 \section{Resultados Numéricos}
 \label{sec:numerical-results}
 
-Nas figuras que irão ser expostas tem-se a verde os resultados do \textit{Barrier Method} e a vermelho do \textit{CVX}.  Os retornos e os riscos dos \textit{assets} são iguais para ambos os programas.
+Nas figuras que irão ser expostas tem-se a vermelho os resultados do \textit{Barrier Method} e a verde do \textit{CVX}.  Os retornos e os riscos dos \textit{assets} são iguais para ambos os programas.
 Para verificar o correto funcionamento de ambos os programas realizaram-se testes em que os resultados podem ser facilmente previstos, tais como:
 
 \begin{itemize}
@@ -314,24 +315,26 @@ No caso enunciado acima, a solução de portfólio ótima é intuitiva, os progr
 
 \end{itemize} 
 
-%No gráfico da figura \ref{fig:tempometodos}, é possível observar o tempo requerido para a otimização de uma solução para o problema, consoante a abordagem utilizada, em função do número de variáveis do problema.
+No gráfico da figura \ref{fig:tempometodos}, é possível observar o tempo requerido para a otimização de uma solução para o problema, consoante a abordagem utilizada, em função do número de variáveis do problema.
 
-%Quando o número de variáveis é pequeno, menor que cem, o \textit{Barrier Method} é cerca de cem vezes mais rápido que o \textit{CVX}. Ao aumentar o seu número, a diferença entre os tempos de otimização diminui, continuando o \textit{Barrier Method} a ser mais rápido (cerca de dez vezes). A partir de cerca de mil variáveis, a diferença entre os tempos volta a ser superior.
+Quando o número de variáveis é pequeno, menor que cem, o \textit{Barrier Method} é cerca de cem vezes mais rápido que o \textit{CVX}. Ao aumentar o seu número, a diferença entre os tempos de otimização diminui, continuando o \textit{Barrier Method} a ser mais rápido (cerca de dez vezes). A partir de cerca de mil variáveis, a diferença entre os tempos volta a ser superior.
 
 
-%\begin{figure}[htp]
-%\captionsetup{font=scriptsize}  
-%  \centering
-%  \includegraphics[width=0.9\columnwidth]{./tempo_metodos}
-%  \caption{Tempo de resolução do problema pelos dois \textit{solvers}}
-%  \label{fig:tempometodos}
-%\end{figure}
+\begin{figure}[htp]
+\captionsetup{font=scriptsize}  
+ \raggedright
+  \begin{minipage}{5cm}
+ \includegraphics[width=9.8cm, height=6cm, left]{./tempo_metodos}
+  \end{minipage}
+  \caption{Tempo de resolução do problema pelos dois \textit{solvers}}
+    \label{fig:tempometodos}
+\end{figure}
 
 
 \section{Conclusão}
 \label{sec:conclusion}
 
-A partir da utilização do \textit{Barrier Method} foi possível aproximar os resultados aos obtidos pelo \textit{CVX} só que com um tempo bastante inferior, tal como esperado. Os testes realizados foram feitos com número de incógnitas variável de forma a obter uma gama de resultados com maior abrangência, sendo obtidos resultados até mil e quinhentas variáveis, número a partir do qual os resultados deixam de ser produzidos em tempo útil. Sendo possível obter pelo \textit{Barrier Method} resultados em menor tempo, este será um método de eleição para a vida real, em que milissegundos são fulcrais na perda/ganho de capital próprio.
+A partir da utilização do \textit{Barrier Method} foi possível aproximar os resultados aos obtidos pelo \textit{CVX} só que com um tempo bastante inferior. Os testes realizados foram feitos com número de incógnitas variável de forma a obter uma gama de resultados com maior abrangência, sendo obtidos resultados até mil e quinhentas variáveis, número a partir do qual os resultados deixam de ser produzidos em tempo útil. Sendo possível obter pelo \textit{Barrier Method} resultados em menor tempo, este será um método de eleição para a vida real, em que milissegundos são fulcrais na perda/ganho de capital próprio.
 
 
 \begin{thebibliography}{9}
