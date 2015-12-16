@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  16 DEC 2015 18:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.4)  16 DEC 2015 19:18
 entering extended mode
 **relatorio.tex
 (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.tex
@@ -657,64 +657,75 @@ Underfull \hbox (badness 2351) in paragraph at lines 195--196
 <./gama_0.jpg, id=24, 351.56343pt x 289.08pt>
 File: ./gama_0.jpg Graphic file (type jpg)
  <use ./gama_0.jpg>
-Package pdftex.def Info: ./gama_0.jpg used on input line 283.
-(pdftex.def)             Requested size: 226.79846pt x 186.48824pt.
- [3 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_0.jpg>]
-<./gama_100.jpg, id=28, 362.10281pt x 288.3272pt>
+Package pdftex.def Info: ./gama_0.jpg used on input line 290.
+(pdftex.def)             Requested size: 105.46983pt x 86.72466pt.
+
+<./gama_100.jpg, id=25, 362.10281pt x 288.3272pt>
 File: ./gama_100.jpg Graphic file (type jpg)
  <use ./gama_100.jpg>
-Package pdftex.def Info: ./gama_100.jpg used on input line 296.
-(pdftex.def)             Requested size: 226.79846pt x 180.5912pt.
-
+Package pdftex.def Info: ./gama_100.jpg used on input line 297.
+(pdftex.def)             Requested size: 108.63167pt x 86.49881pt.
+ [3]
 <./miu_igual_risco_diferente.jpg, id=29, 353.82187pt x 289.08pt>
 File: ./miu_igual_risco_diferente.jpg Graphic file (type jpg)
 
 <use ./miu_igual_risco_diferente.jpg>
-Package pdftex.def Info: ./miu_igual_risco_diferente.jpg used on input line 309
+Package pdftex.def Info: ./miu_igual_risco_diferente.jpg used on input line 311
 .
-(pdftex.def)             Requested size: 226.79846pt x 185.30168pt.
+(pdftex.def)             Requested size: 194.60262pt x 158.99448pt.
 
-<./tempo_metodos.jpg, id=30, 849.92531pt x 411.78844pt>
+<./correlacao.jpg, id=30, 563.10374pt x 421.575pt>
+File: ./correlacao.jpg Graphic file (type jpg)
+ <use ./correlacao.jpg>
+Package pdftex.def Info: ./correlacao.jpg used on input line 323.
+(pdftex.def)             Requested size: 226.79846pt x 169.79776pt.
+
+<./tempo_metodos.jpg, id=31, 849.92531pt x 411.78844pt>
 File: ./tempo_metodos.jpg Graphic file (type jpg)
 
 <use ./tempo_metodos.jpg>
-Package pdftex.def Info: ./tempo_metodos.jpg used on input line 327.
+Package pdftex.def Info: ./tempo_metodos.jpg used on input line 343.
 (pdftex.def)             Requested size: 278.84215pt x 170.71307pt.
 
-Overfull \hbox (11.00662pt too wide) in paragraph at lines 346--347
+Overfull \hbox (11.00662pt too wide) in paragraph at lines 362--363
 []\OT1/ptm/m/n/8 [BV[]CVXSLIDES] \OT1/pcr/m/n/8 https://web.stanford.edu/boyd/c
 vxbook/
  []
 
-[4 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_100.jpg> <C:/
-BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/miu_igual_risco_diferente
-.jpg> <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/tempo_metodos.j
-pg>] (C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux) )
- 
+[4 <C:/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_0.jpg> <C:/BG
+-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/gama_100.jpg> <C:/BG-files/
+IST/4ano/1semestre/OA/OA_proj/report_barrier/miu_igual_risco_diferente.jpg> <C:
+/BG-files/IST/4ano/1semestre/OA/OA_proj/report_barrier/correlacao.jpg> <C:/BG-f
+iles/IST/4ano/1semestre/OA/OA_proj/report_barrier/tempo_metodos.jpg>]
+(C:\BG-files\IST\4ano\1semestre\OA\OA_proj\report_barrier\relatorio.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6613 strings out of 493921
- 98860 string characters out of 3146873
- 179177 words of memory out of 3000000
- 9812 multiletter control sequences out of 15000+200000
+ 6619 strings out of 493921
+ 98967 string characters out of 3146873
+ 179185 words of memory out of 3000000
+ 9817 multiletter control sequences out of 15000+200000
  39057 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  44i,10n,75p,872b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files
-/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
- 2.9_/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Prog
-ram Files/MiKTeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX
- 2.9_/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/typ
-e1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/utm
-ri8a.pfb>
-Output written on relatorio.pdf (4 pages, 369156 bytes).
+{C:/Program Files/MiKTeX 2.9_/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
+es/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9_/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9_
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/courier/ucrr8a.pfb><C:/Pr
+ogram Files/MiKTeX 2.9_/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKT
+eX 2.9_/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/t
+ype1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9_/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on relatorio.pdf (4 pages, 391542 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
